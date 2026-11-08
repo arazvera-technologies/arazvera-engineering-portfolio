@@ -1,0 +1,10 @@
+{
+  "created": {
+    "duplicate": false,
+    "id": 1,
+    "tenant": "tenant-a",
+    "title": "Example task"
+  },
+  "production_approved": false,
+  "tenant_b_items": []
+}

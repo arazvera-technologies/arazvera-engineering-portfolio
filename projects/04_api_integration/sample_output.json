@@ -1,0 +1,13 @@
+{
+  "crm": {
+    "adapter": "crm",
+    "status": 200,
+    "synthetic": true
+  },
+  "inventory": {
+    "adapter": "inventory",
+    "status": 200,
+    "synthetic": true
+  },
+  "outbound_network_calls": 0
+}

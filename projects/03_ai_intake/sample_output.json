@@ -1,0 +1,6 @@
+{
+  "category": "billing",
+  "human_approval_required": true,
+  "provider": "local-rule-mock",
+  "status": "manual_review"
+}

@@ -1,0 +1,24 @@
+name: Public synthetic sample verification
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  synthetic-samples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Execute each independent sample and tests
+        run: |
+          set -euo pipefail
+          for project in projects/*; do
+            (cd "$project" && python demo.py && python -m unittest discover -s tests -v)
+          done
+      - name: Scan all public files and complete Git history
+        run: python tools/public_release_audit.py --root . --history --report /tmp/public_release_audit.json

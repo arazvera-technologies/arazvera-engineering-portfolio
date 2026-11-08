@@ -13,13 +13,13 @@ Independent, evidence-based Python and automation engineering portfolio. **Level
 
 ## 02 — Public Project Demos
 
-Five independently runnable, synthetic-only project samples are planned for this public repository. They will be added after verification. The underlying reusable client and engineering library remains private.
+Five independently runnable, synthetic-only public examples were locally tested with Python standard-library unittest (10 passes). They do not contain or expose the private Level 2 client templates.
 
-1. Multi-Tenant FastAPI Platform
-2. Reliable Lead Automation
-3. Secure AI Intake Assistant
-4. Universal API Integration Starter
-5. Docker Delivery Toolkit
+1. [Tenant isolation & idempotent notes](projects/01_multi_tenant_api/) - 2 tests, pure Python demo
+2. [Reliable lead queue](projects/02_reliable_leads/) - 2 tests, local mock
+3. [Review-first intake](projects/03_ai_intake/) - 2 tests, rules-only mock (not live AI)
+4. [Two mock API adapters](projects/04_api_integration/) - 2 tests, HMAC illustration
+5. [Docker delivery readiness](projects/05_docker_delivery/) - 2 tests, syntax-only validation
 
 ## 03 — Capability and Services Catalog
 
