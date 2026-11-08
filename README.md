@@ -23,7 +23,14 @@ Five independently runnable, synthetic-only public examples were locally tested 
 
 ## 03 — Capability and Services Catalog
 
-English capability sheet and delivery catalog follow after project acceptance evidence has been recorded.
+The following English documents now reflect the five tested private prototypes (11 local tests), five public synthetic samples (10 tests), and actual passing GitHub Actions.
+
+- [Four-page Level 2 catalog (PDF)](catalog/ARAZVERA_Level2_Premium_Engineering_Catalog_EN.pdf)
+- [Editable Level 2 catalog (DOCX)](catalog/ARAZVERA_Level2_Premium_Engineering_Catalog_EN.docx)
+- [One-page capability sheet (PDF)](catalog/ARAZVERA_Level2_Capability_Sheet_EN.pdf)
+- [Editable capability sheet (DOCX)](catalog/ARAZVERA_Level2_Capability_Sheet_EN.docx)
+- [Three short contractor proposal drafts](catalog/ARAZVERA_Level2_Three_Proposal_Examples_EN.md)
+- [Verified test and CI summary](docs/LEVEL2_VERIFIED_RESULTS.md)
 
 ## Verified n8n demo
 
