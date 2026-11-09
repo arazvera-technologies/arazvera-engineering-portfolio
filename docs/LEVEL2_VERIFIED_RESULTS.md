@@ -1,40 +1,37 @@
-# ARAZVERA — Verified Engineering Evidence (09 Nov 2026)
+# ARAZVERA Level 2 | Verifiable Engineering Evidence
 
-**Evidence categories must remain separate. These are not certifications or commercial-production acceptance.**
+**Updated 9 November 2026.** The evidence below deliberately distinguishes public testable code from private starter-kit validation. Neither is external certification, commercial production deployment or guaranteed SLA.
 
-| Evidence | Locally verified results | Scope |
-| --- | --- | --- |
-| Level 1 private recovery | 172 tests PASS | Four separately restored engineering-kit repositories (historical) |
-| Level 2 private engineering | 16 tests PASS | Five private prototypes / generator; private commit 93607b8 |
-| Private Docker runtime CI | 3 jobs PASS in earlier recorded pipeline | Python 3.12 synthetic Docker delivery, local HTTP health and restricted runtime. NOT n8n runtime |
-| Original five public examples | 10 tests PASS | Two tests per independent synthetic Python demonstration |
-| New public flagship, project 06 | **16 tests PASS** in local Windows Python 3.12 | Actual localhost HTTP, HMAC verification, concurrency, SQLite durable processing, backoff, dead-letter, review and lease failure paths |
-| New public project 07 | **21 tests PASS**, locally verified | Atomic CSV/SQLite import, dry-run, version conflicts, quarantine, concurrency, injected rollback |
-| Public combined local tests | **47 tests PASS** (10 original + 16 project 06 + 21 project 07) | No external API, paid cloud provider, or customer production environment |
+## Public engineering cases
 
-## Evidence and actual commands
+| Case | Tests | Actual integration | Key negative-path evidence | Boundary |
+| --- | ---: | --- | --- | --- |
+| Projects 01-05 | 10 | Small pure-Python and config simulations | Validation, idempotency and mocked adapters | No production systems |
+| Project 06 - Reliable Webhook Pipeline | 16 | Real localhost HTTP + durable SQLite | Forged HMAC, replay conflict, lease recovery, retry, dead letter and manual reconciliation | Mock CRM only |
+| Project 07 - Transactional Reconciliation | 21 | Real SQLite/CSV transactions | Stale version, injected rollback, bad inputs and concurrent batches | No real customer ERP |
+| **Project 08 - Authorized PostgreSQL API** | **14** | **FastAPI TestClient requests, RS256 signatures and an actual PostgreSQL 16 database** | Cross-tenant denial, DB membership revocation, token failures, optimistic conflict, idempotent replay and DB outage | No external IdP, TLS ingress or RLS |
+| **Total public cases** | **61** | **Eight runnable synthetic case studies** | Negative cases executed, not merely documented | No deployment acceptance |
 
-Project 06: enter projects/06_resilient_webhook_pipeline and execute:
+Project 08 fixtures generate 2048-bit RSA signing keys in memory, supply explicitly trusted public JWKS, exercise HTTP authentication/authorization, and create disposable PostgreSQL tables. No customer secrets or private kit sources are committed.
 
-~~~bash
-python demo.py
-python -m unittest discover -s tests -v
-~~~
+**Test instructions:** `projects/08_postgres_auth_contract/README.md` documents a one-command disposable PostgreSQL container, fixed requirements and the same tests executed in GitHub Actions on Python 3.11 and 3.12.
 
-Observed local demo: HTTP 201, initial synthetic CRM retry, backoff hold, second successful attempt, process-reopen state complete, auditable transitions; zero failed tests (16 run).
+[Public CI history](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions) - check the latest commit's `engineering-demos` jobs, which include a real PostgreSQL service and the public Git history scanner.
 
-The latest [public GitHub Actions run #42573061378](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42573061378) completed successfully for **Python 3.11 and Python 3.12**. Both jobs executed all seven demonstrations and **47 tests**, plus the full-history secret scan. This is reproducible prototype evidence, not certification or deployment approval.
+## Separate private engineering baseline (not publicly reproducible)
 
-Earlier verified jobs (prior to this update):
-- [Private Level 2 Actions run](https://github.com/arazvera-technologies/arazvera-level2-private-engineering-portfolio/actions/runs/42532266274)
-- [Previous public sample Actions run](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42532374737)
+As of **9 November 2026**, the separate *private* Level 2 repository was verified at commit `2dadbe19330d0138afae23d7add88f9ce4b0e074`: **25 reusable starter-kit families**, mapping 30 service directions to initial private source, with **313 local tests passing** (0 failed, 0 errors, 0 skipped) against PostgreSQL 16. The private repository's main GitHub Actions run `42603689140` passed Python 3.11/3.12, Docker smoke and dependency review.
 
-## Material release limits
+These private numbers are owner-reported engineering checks, not reproducible by anonymous public users. Their code, backup and customer credentials are intentionally excluded from the public repository. The phrase "30 directions" does **not** mean 30 production-ready products.
 
-The new project is a **local synthetic interoperability lab**, not a licensed managed integration or a public Internet-ready API. The HMAC fixture key and demo admin token are fake. Commercial deployment requires an approved identity provider, security/privacy review, customer-owned provider accounts, stable database, load and recovery tests and a separate owner acceptance.
+Level 1's separate historical recovery baseline was **172 tests** across four earlier private kit repositories, not part of the 61 public or 313 private Level 2 counts.
 
-A real, isolated n8n-to-FastAPI execution passed five synthetic HTTP scenarios (201/200/422/202/503), but the full self-hosted n8n runtime remains **BLOCKED** for production pending supported remediation. The two-minute recorded video is not linked until public-access permissions are verified.
+## Release and commercial boundaries
 
-**Client-facing documentation refresh:** advanced Level 2 systems engineering résumé (PDF and editable Word) and the new six-package Level 2 engineering catalog (PDF and editable Word) have been drafted from verified projects 06 and 07. These are evidence-based marketing documents, not external certifications.
+- Public source contains no production deployment, third-party integration keys or private client data.
+- The real PostgreSQL case provides application-level tenant checks, **not database-enforced RLS**.
+- Signed offline JWKS checking does **not** include real OAuth/OIDC login, remote key fetch, token revocation registry or TLS.
+- The public n8n-to-FastAPI locally recorded example remains separate. The vendor n8n runtime has **not** been cleared for production deployment.
+- Customer-specific provider access, contractual acceptance, incident response, monitoring, regulated data rules and supported deployments require independent sign-off.
 
-Refer to [the Level 2 global services matrix](LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md) for every service's proof status and next development milestone. A job listing is not an engagement, qualification or guaranteed rate.
+The public repository runs a secret/history scan; a passing scan reduces exposure risk but is not a guarantee of zero vulnerabilities.

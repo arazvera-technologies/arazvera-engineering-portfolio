@@ -1,87 +1,70 @@
-# ARAZVERA TECHNOLOGIES — Engineering Portfolio
+# ARAZVERA TECHNOLOGIES | Engineering Portfolio
 
-**Python • API Systems • Integration Reliability • Evidence-Based Automation**
+**Production-minded Python engineering | Secure APIs | Reliable Integrations | Transactional Data**
 
-An independent, public engineering portfolio showcasing **runnable synthetic prototypes**, real tests, and detailed limits. Level 2 is our internal delivery tier for scoped multi-component client projects, **not a certification**. This repository deliberately contains no private customer starter-kit sources, keys or commercial client data.
+We build scoped backend and automation solutions with testable acceptance criteria, explicit failure handling, and clean delivery documentation. This public repository hosts **eight independently runnable, synthetic engineering case studies** (not deployed customer systems). It deliberately excludes the proprietary ARAZVERA starter-kit library and all customer credentials.
 
-## 01 — Engineering Resumes | Choose Your Project Level
+**[Explore the advanced Level 2 service catalog](catalog/ARAZVERA_Level2_Client_Engineering_Catalog_EN_20261109.pdf)** | **[Level 2 resume (PDF)](resumes/level-2/ARAZVERA_Level2_Backend_Systems_Resume_EN.pdf)** | **[Service verification matrix](docs/LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md)** | **[CI test runs](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions)**
 
-**[Separate Level 1 and Level 2 resume directory](resumes/README.md)**
+## Featured engineering case studies
 
-### [Level 1 — Focused Python & Automation](resumes/level-1/README.md)
+| Case | What runs | Evidence | Limits |
+| --- | --- | --- | --- |
+| **[08 - Authorized PostgreSQL API](projects/08_postgres_auth_contract/)** | FastAPI + signed RS256 JWT + explicit PostgreSQL membership and versioned JSONB records | **14 tests**: tenant isolation, revocation, signature checks, optimistic updates, idempotent replay and outage failure; actual PostgreSQL 16 | Synthetic IdP only; no production RLS, TLS, OAuth login |
+| **[06 - Webhook Reliability & Recovery](projects/06_resilient_webhook_pipeline/)** | Local signed HTTP ingress, SQLite event queue, leasing, retry and dead-letter recovery | **16 tests**: HMAC, concurrent deliveries, crash recovery, auditability and manual reconciliation | CRM adapter mocked; no vendor n8n runtime |
+| **[07 - Transactional Data Reconciliation](projects/07_data_reconciliation_lab/)** | CSV validation, SQLite atomic import, idempotency, optimistic revisions and quarantine | **21 tests**: dry-run, rollback, version conflicts and concurrent batch processing | CSV/SQLite laboratory, not customer ERP/DB migration |
+| **[01-05 - Targeted integrations](projects/)** | Small isolated Python prototypes for tenant notes, leads, human review, API contracts and Docker configuration | **10 tests** across five deliberately bounded samples | Demonstration modules, not customer-ready platforms |
 
-For smaller, bounded scripts, debugging and lightweight API/automation work.
+**Public test evidence:** **61 tests across 8 projects** (47 earlier + 14 PostgreSQL/HTTP tests). CI uses Python **3.11 and 3.12** with an actual disposable PostgreSQL 16 service, runs all demos, and audits public Git history for secrets. [Inspect live GitHub Actions](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions).
 
-- [**Current Level 1 resume — PDF**](resumes/level-1/ARAZVERA_Level1_Engineering_Resume_EN.pdf)
-- [Level 1 editable Word](resumes/level-1/ARAZVERA_Level1_Engineering_Resume_EN.docx)
+**Private engineering baseline (not publicly distributed):** 25 reusable starter-kit families mapped to 30 scoped service directions; **313 tests passing locally** against a separate disposable PostgreSQL 16, and private CI passing on Python 3.11/3.12, Docker smoke and dependency review as of **9 November 2026**. Private-kit tests are **not runnable or independently reviewable from this public repository**. The private source, bundle, supplier/customer secrets and internal build assets are not published.
 
-Four separate Level 1 private engineering kits remain unchanged; **172 historical Level 1 recovery tests** are a separate baseline.
+## What makes this Level 2 work
 
-### [Level 2 — Backend Systems, API Integration & Reliability](resumes/level-2/README.md)
+A good engineering deliverable handles failure, not only the happy path. These projects demonstrate explicit contracts around **authorization, request replay, stale writes, client-owned state, bounded retries, safe rollback and evidence capture**. Each case includes source code, test cases, a quick-start, and an honest account of what it does **not** prove.
 
-For multi-step backend, Webhook processing, error recovery and safe data-integration projects.
+```text
+Client contract -> validated request -> verified identity/scope
+        -> tenant-safe transaction / durable processing
+        -> explicit receipt or fail-closed error -> tests & handover
+```
 
-- [**Current Level 2 advanced resume — PDF (two pages)**](resumes/level-2/ARAZVERA_Level2_Backend_Systems_Resume_EN.pdf)
-- [Current Level 2 editable Word](resumes/level-2/ARAZVERA_Level2_Backend_Systems_Resume_EN.docx)
+Level 2 is an **internal delivery tier**, not a certification or a claim of enterprise production experience. The private starter kits accelerate client-specific engineering but cannot replace a signed scope, real provider authorization, production threat review, deployment tests or user acceptance.
 
-**Evidence:** Seven public runnable projects, **47 tests** with Python 3.11 and 3.12 [GitHub Actions passing](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42574597847). Featured [Webhook recovery](projects/06_resilient_webhook_pipeline/) and [safe data reconciliation](projects/07_data_reconciliation_lab/) cases are linked directly. The 16 private Level 2 tests are counted separately. Synthetic work is not a customer production deployment.
+## Services that can be scoped for clients
 
-Legacy PDF/DOCX URLs at the old `resumes/` root are retained, but are **historical**. For current documents, use the level-specific links above.
+- **Secure Python / FastAPI backend:** typed endpoints, tenant isolation, RBAC boundary and negative-path tests.
+- **Webhook and workflow reliability:** signed ingress, replay-safe queues, recoverable retries and audit events.
+- **Data integrity and migration tooling:** validated imports, dry-run previews, optimistic versions and rollback.
+- **CRM / ERP / API integrations:** bounded adapters and contract/fault testing; real account/API access supplied lawfully by the client.
+- **Docker + CI delivery:** repeatable environment setup, health verification, protected release gates and handover.
+- **Human-reviewed AI intake:** explicit uncertainty routes, review before actions, and model/API integration only when approved.
 
-## 02 — Public Runnable Projects
+Browse the **[30-domain proof-status matrix](docs/LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md)**. A mapped starter is not evidence that 30 full commercial services are deployed.
 
-### Flagship Level 2 engineering case
+## Choose the right resume
 
-**[06 — Resilient Webhook & Job Recovery Lab](projects/06_resilient_webhook_pipeline/)** — a real localhost HTTP + SQLite system, **16 tested scenarios** covering:
+| Tier | Focus | Current PDF |
+| --- | --- | --- |
+| Level 1 | Small Python fixes, utilities, single-step automation | [Level 1 resume](resumes/level-1/ARAZVERA_Level1_Engineering_Resume_EN.pdf) |
+| Level 2 | Backend systems, integration reliability, transactions and secure boundaries | [Level 2 resume](resumes/level-2/ARAZVERA_Level2_Backend_Systems_Resume_EN.pdf) |
 
-- HMAC-signed Webhooks, timestamp verification, cross-tenant access denial
-- Durable event processing, concurrent delivery, deduplication and replay conflicts
-- Atomic job leasing, bounded retries and backoff
-- Dead-letter recovery, uncertain side-effect quarantine and manual reconciliation
-- Auditable transitions and process-restart persistence
+The legacy documents under `resumes/` are preserved as historical snapshots. See the [resume index](resumes/README.md) for current editable files.
 
-Run with Python 3.11+ only; no paid APIs, cloud account, GPU or production n8n engine required. The demo has a functioning HTTP transport and a deliberately **mocked** CRM provider, not an active customer integration. All server listeners bind localhost.
+## How a client engagement works
 
-### Second advanced Level 2 case — Data integrity and migration
+1. **Discovery:** define business outcome, dependencies, scope, data and legal/provider access.
+2. **Acceptance contract:** agree endpoint schemas, negative-path tests, ownership, security gates and milestones.
+3. **Engineering:** adapt a private reusable starter under the client contract; add integration tests and documented assumptions.
+4. **Client-specific validation:** test in an authorized staging environment, including recovery, monitoring and release controls.
+5. **Handover:** deliver agreed source, runbooks, deployment/recovery evidence and acceptance results.
 
-**[07 — Atomic Data Reconciliation & Safe Import Lab](projects/07_data_reconciliation_lab/)** — a real CSV/SQLite system with **21 tests** for transaction-safe dry-run, idempotent batch import, versioned updates, quarantined records, concurrent same-batch processing, and injected-fault rollback. No paid provider or live customer data is used.
+Customer-owned VPS/API resources, credentials and approval gates remain in the customer's control. No direct trading, unauthorized account control, CAPTCHA bypass, unsupported production n8n runtime, guaranteed SLA or live customer deployment is represented by this repository.
 
-### Additional Level 2 topic samples
+## Independent verification
 
-The five earlier synthetic examples are **smaller** than the flagship and demonstrate isolated behavior, not complete client products:
-
-1. [Tenant isolation and idempotent notes](projects/01_multi_tenant_api/) — 2 tests, pure Python illustration
-2. [Reliable lead queue](projects/02_reliable_leads/) — 2 tests, local mock
-3. [Review-first text intake](projects/03_ai_intake/) — 2 tests, rules-only mock
-4. [Mock API adapter and HMAC](projects/04_api_integration/) — 2 tests
-5. [Docker configuration readiness](projects/05_docker_delivery/) — 2 tests, with separate private Docker runtime CI evidence
-
-**Public automated tests:** 10 in the original five samples + 16 for project 06 + 21 for project 07 = **47 verified test cases**. [GitHub Actions run #42573061378](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42573061378) passed all seven executable projects and security checks on Python **3.11 and 3.12**.
-
-**Private reference baseline:** Level 1 had 172 documented passing recovery tests across four independent repositories. Private Level 2 had 16 locally passing tests in a separately verified source revision, plus a Python 3.12 Docker smoke job in private CI. None of these counts imply a production SLA.
-
-## 03 — Services and Delivery Catalog
-
-- [Level 2 global project and service research matrix — 30 specific services, with proof status](docs/LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md)
-- [NEW: Advanced Level 2 Engineering Catalog (PDF, six project packages)](catalog/ARAZVERA_Level2_Advanced_Engineering_Catalog_EN_20261109.pdf)
-- [Advanced Level 2 Catalog (editable Word)](catalog/ARAZVERA_Level2_Advanced_Engineering_Catalog_EN_20261109.docx)
-- [Previous Level 2 catalog snapshot (PDF)](catalog/ARAZVERA_Level2_Premium_Engineering_Catalog_EN.pdf)
-- [Previous Level 2 catalog snapshot (Word)](catalog/ARAZVERA_Level2_Premium_Engineering_Catalog_EN.docx)
-- [Level 2 capability sheet (PDF)](catalog/ARAZVERA_Level2_Capability_Sheet_EN.pdf)
-- [Editable capability sheet (Word)](catalog/ARAZVERA_Level2_Capability_Sheet_EN.docx)
-- [Three contractor proposal drafts](catalog/ARAZVERA_Level2_Three_Proposal_Examples_EN.md)
-- [Engineering verification and CI evidence](docs/LEVEL2_VERIFIED_RESULTS.md)
-
-### What we intentionally exclude
-
-No video generation, no GPU-heavy model training, no unverifiable enterprise capabilities, no unauthorized platform access or live customer credentials. A client may supply an authorized API or server for a separately scoped assignment, but such connectivity is **not part of the synthetic public evidence**.
-
-## Verified n8n evidence and deployment boundary
-
-We have a separate real, locally recorded two-minute n8n-to-FastAPI execution demonstration. Public viewing permission is not independently verified, so this repository does not link it. The official self-hosted n8n vendor runtime remains under a **separate production-security block** and is not distributed here.
-
-The source code and tests prove local engineering behavior only. Every commercial customer integration requires legal eligibility, an approved environment, appropriate identity and authorization controls, external fault tests, client data rules, license checks, backups, performance review and signed acceptance.
+[Verified engineering results](docs/LEVEL2_VERIFIED_RESULTS.md) | [Workflow runs](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions) | [Public release audit source](tools/public_release_audit.py)
 
 **Contact:** contact.arazvera@gmail.com
 
-**Organization:** https://github.com/arazvera-technologies
+ARAZVERA TECHNOLOGIES — [GitHub organization](https://github.com/arazvera-technologies)
