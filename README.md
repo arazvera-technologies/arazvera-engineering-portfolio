@@ -6,6 +6,18 @@ We build scoped backend and automation solutions with testable acceptance criter
 
 **[Level 3 specialist catalog (PDF)](catalog/ARAZVERA_Level3_Specialist_Engineering_Catalog_EN_20261109.pdf)** | **[Level 3 catalog (Word)](catalog/ARAZVERA_Level3_Specialist_Engineering_Catalog_EN_20261109.docx)** | **[Level 3 specialist resume (PDF)](resumes/level-3/ARAZVERA_Level3_Backend_Reliability_Specialist_Profile_EN_20261109.pdf)** | **[Level 3 Word](resumes/level-3/ARAZVERA_Level3_Backend_Reliability_Specialist_Profile_EN_20261109.docx)** | **[Explore the advanced Level 2 service catalog](catalog/ARAZVERA_Level2_Client_Engineering_Catalog_EN_20261109.pdf)** | **[Level 2 resume (PDF)](resumes/level-2/ARAZVERA_Level2_Backend_Systems_Resume_EN.pdf)** | **[Service verification matrix](docs/LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md)** | **[CI test runs](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions)**
 
+## Level 3 — Specialist security, recovery and reliability engineering
+
+**[Explore Level 3 services, proof and engagement options](level-3/README.md)**
+
+Specialist assignments include **FastAPI/PostgreSQL tenant-boundary hardening, transactional outbox and worker recovery, JWT/RS256/JWKS key-rotation validation, controlled database outage testing, and release/incident safeguards**. We deliver scoped acceptance tests, security exclusions, recovery/runbook evidence and a documented client handover.
+
+**What can be verified publicly:** 9 executable synthetic cases with 75 tests, full source and public CI. **Further private engineering:** the recorded Level 3 suite reached 107 unit tests plus focused PostgreSQL, JWT/JWKS, recovery and alert-journal integration labs, with a successful private CI run. Private code is not reproduced in this public repository; those tests are *private lab evidence*, not completed customer deployments or public reproduction.
+
+**[Level 3 specialist overview](level-3/README.md)** | **[Full service catalog (PDF)](catalog/ARAZVERA_Level3_Specialist_Engineering_Catalog_EN_20261109.pdf)** | **[Capability résumé (PDF)](resumes/level-3/ARAZVERA_Level3_Backend_Reliability_Specialist_Profile_EN_20261109.pdf)**
+
+**Commercial positioning:** Level 3 proposed specialist quotations start at **USD $150–$250+/hour**, subject to scope, client validation and negotiated acceptance. This is a target range only; it is *not* an achieved contract rate or guaranteed market price.
+
 ## Featured engineering case studies
 
 | Case | What runs | Evidence | Limits |
@@ -20,9 +32,9 @@ We build scoped backend and automation solutions with testable acceptance criter
 
 **Private engineering baseline (not publicly distributed):** 25 reusable starter-kit families mapped to 30 scoped service directions; **313 tests passing locally** against a separate disposable PostgreSQL 16, and private CI passing on Python 3.11/3.12, Docker smoke and dependency review as of **9 November 2026**. Private-kit tests are **not runnable or independently reviewable from this public repository**. The private source, bundle, supplier/customer secrets and internal build assets are not published.
 
-## Level 3 specialist evidence (not a production credential)
+## Level 3 evidence and deployment boundaries
 
-The [PostgreSQL RLS and recovery lab](projects/09_postgres_rls_recovery/) is our **first Level 3 specialization proof**: 14 additional tests of actual database-enforced tenant isolation plus a verified restore into a second isolated database in the same disposable container. It is **not** 14 enterprise deployments, a SOC 2 audit or experience running Supabase production systems. See the [targeted Level 3 readiness plan](docs/LEVEL3_SPECIALIST_READINESS_20261109.md).
+The [public PostgreSQL RLS/restore case](projects/09_postgres_rls_recovery/) is one independently reproducible proof, alongside [public FastAPI](projects/08_postgres_auth_contract/), [webhook reliability](projects/06_resilient_webhook_pipeline/) and [transactional reconciliation](projects/07_data_reconciliation_lab/). The newer multi-component Level 3 labs remain private. **[See the complete specialist showcase](level-3/README.md)** for the current scope, recorded results and excluded production claims. No synthetic lab constitutes SOC 2 certification, customer enterprise IAM, a multi-host disaster-recovery guarantee or client production history.
 
 ## What makes this Level 2 work
 
