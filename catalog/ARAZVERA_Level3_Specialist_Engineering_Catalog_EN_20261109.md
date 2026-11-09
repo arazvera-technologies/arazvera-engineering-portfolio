@@ -52,6 +52,14 @@
 
 **Verified evidence:** The private integrated lab exercised three live local components: Uvicorn/FastAPI, PostgreSQL 16 Docker and an independently executed Python worker. It passed **15 synthetic integration acceptance checks**, including JWT signature/issuer/audience/expiry/scopes, different tenant database LOGINS, denied cross-tenant SQL reads/writes, restricted worker permissions, 18 database-local deliveries, atomic rollback, API restart durability, and queue metrics protected by a distinct ops:read scope. **All four private GitHub Actions jobs succeeded**, including the Python 3.11/3.12 unit-test matrix and both PostgreSQL Docker labs. No live customer IAM, public ingress, independent physical host, production SLA or external exactly-once API delivery is claimed.
 
+## G. Tenant-specific queue incident readiness and release risk evidence
+
+**Customer problem:** stale queue health claims, silent dead letters, an overloaded tenant masking other tenants, and unchecked operational release decisions.
+
+**Scoped deliverables:** risk and observability inventory, per-tenant queue health inputs, fail-closed HOLD/PASS staging evidence, tenant-specific abnormal-condition reproduction, recovery/runbook checklist and integration with customer-approved incident and release policies.
+
+**Verified lab:** The private incident readiness module passed **47 local unit tests** and **19 end-to-end acceptance checks on three successive runs**. PostgreSQL FORCE RLS and JWT ops:read constrain queue observations by tenant. Real synthetic drills verified tenant A backlog or dead letter => tenant A HOLD, tenant B unaffected, and recovery after workers clear a backlog => staging observation PASS. All four relevant private CI jobs passed. The observed SHA256 digest does not sign telemetry; there is no real SLO, 24/7 alert transport, enterprise identity provider or approved automated failover.
+
 ## Verification register — dated 9 November 2026
 
 | Asset | Verified | Scope limit |
@@ -64,13 +72,16 @@
 | Private Level 3 release/SLO/signed evidence modules | **61 passing local tests** and passing Python 3.11/3.12 CI | HMAC test keys and offline observations; no live IAM or deployment |
 | Private PostgreSQL transactional outbox | **21 unit tests + 12 Docker integration checks; 8 workers, 120 distinct initial events; same-transaction business COMMIT/ROLLBACK; private CI successful** | Single-host lab, no external provider delivery or independently authenticated DB tenant role |
 | Authenticated FastAPI + tenant RLS + worker integration | **15 local integration checks + 4 private CI jobs passed** | Lab-issued JWTs, two synthetic tenant roles, one physical host, no external delivery or production identity provider |
+| Per-tenant queue incident readiness | **47 local tests + 19 end-to-end checks repeated three times; all four private CI jobs passed** | Queue-specific lab control only, not real SLO or production release authorization |
 | Existing private Level 2 accelerators | **25 families / 313 recorded local tests** | Separate nonpublic baseline, not publicly reviewable |
 
 These counts refer to different suites; they are not customer deployments. No claim of SOC 2 accreditation, guaranteed uptime, signed penetration test or proven cross-region recovery is made.
 
 ## Commercial positioning and engagement method
 
-Level 1 was positioned for approximately **$30–$80/h**; Level 2 targeted **$100+/h** specialist engagements. Level 3 is intended for more demanding, higher-value fixed-scope or hourly assignments. **No Level 3 rate, contract or earnings are asserted as achieved.** Final pricing depends on verified qualifications, project complexity, market and client terms.
+**Proposed quotation ladder (not achieved income):** Level 1 targets **$30–$80/h** for bounded implementation, Level 2 now targets **$100–$149/h** for complex backend and integrations, and **Level 3 targets $150–$250+/h** for specialist architecture, security boundaries, recovery engineering, incident readiness and accountable risk controls. These are proposed quote ranges, not verified market prices, historical contracts or guaranteed earnings.
+
+**Illustrative Level 3 fixed-scope proposals:** architecture/risk discovery **$3,000–$7,500**, tenant-boundary and reliability hardening **$9,000–$25,000**, and controlled recovery/change assurance **$18,000–$60,000**, subject to scope, client infrastructure, authorized testing, delivery proof, and separately priced third-party costs. Larger engagements must not be sold as already production-validated. Quote milestones and deliverables in writing, not just a model rate.
 
 Each engagement requires written scope and acceptance criteria, lawful client access, customer-owned credentials, controlled staging, negative-path tests, evidence capture, and independent client approval before any production change.
 
