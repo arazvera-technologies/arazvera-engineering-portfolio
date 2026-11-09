@@ -1,0 +1,39 @@
+name: Level 3 synthetic PostgreSQL RLS evidence
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  postgres-rls:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12']
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: l3admin
+          POSTGRES_PASSWORD: synthetic_local_fixture
+          POSTGRES_DB: l3proof
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U l3admin -d l3proof"
+          --health-interval 5s --health-timeout 5s --health-retries 15
+    env:
+      ARAZVERA_L3_ADMIN_DSN: postgresql://l3admin:synthetic_local_fixture@127.0.0.1:5432/l3proof
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install isolated RLS lab dependency
+        run: python -m pip install -r projects/09_postgres_rls_recovery/requirements.txt
+      - name: Prove database-enforced tenant isolation
+        run: python -m unittest discover -s projects/09_postgres_rls_recovery/tests -v
+      - name: Verify no production secrets in public files
+        run: python tools/public_release_audit.py --root . --report /tmp/arazvera-l3-public-scan.json

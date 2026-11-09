@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "lab": "synthetic-postgresql-rls-restoration",
+  "db_engine": "PostgreSQL 16",
+  "source_database": "l3proof",
+  "restore_database": "l3proof_restore",
+  "rows_equal": true,
+  "restored_row_count": 3,
+  "restored_rls_enabled": true,
+  "restored_rls_forced": true,
+  "restored_policy_present": true,
+  "independent_logins_isolated_after_restore": true,
+  "production_approved": false,
+  "limitations": [
+    "No customer data or production system",
+    "Roles are cluster-global and require separate provisioning on a different server",
+    "No TLS ingress, Supabase or external IdP integration",
+    "Restore tested in same isolated test container, not cross-region disaster recovery"
+  ]
+}

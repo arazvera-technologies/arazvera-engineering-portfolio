@@ -2,7 +2,7 @@
 
 **Production-minded Python engineering | Secure APIs | Reliable Integrations | Transactional Data**
 
-We build scoped backend and automation solutions with testable acceptance criteria, explicit failure handling, and clean delivery documentation. This public repository hosts **eight independently runnable, synthetic engineering case studies** (not deployed customer systems). It deliberately excludes the proprietary ARAZVERA starter-kit library and all customer credentials.
+We build scoped backend and automation solutions with testable acceptance criteria, explicit failure handling, and clean delivery documentation. This public repository hosts **nine independently runnable, synthetic engineering case studies** (not deployed customer systems). It deliberately excludes the proprietary ARAZVERA starter-kit library and all customer credentials.
 
 **[Explore the advanced Level 2 service catalog](catalog/ARAZVERA_Level2_Client_Engineering_Catalog_EN_20261109.pdf)** | **[Level 2 resume (PDF)](resumes/level-2/ARAZVERA_Level2_Backend_Systems_Resume_EN.pdf)** | **[Service verification matrix](docs/LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md)** | **[CI test runs](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions)**
 
@@ -10,14 +10,19 @@ We build scoped backend and automation solutions with testable acceptance criter
 
 | Case | What runs | Evidence | Limits |
 | --- | --- | --- | --- |
+| **[09 - PostgreSQL RLS & Restore Lab](projects/09_postgres_rls_recovery/)** | Separate tenant DB logins, forced Row-Level Security and backup/restore rehearsal | **14 tests**: row bypass, role spoofing, unauthorized insert/update, rollback and version conflicts | Same-server synthetic database recovery only; not production Supabase or customer RLS audit |
 | **[08 - Authorized PostgreSQL API](projects/08_postgres_auth_contract/)** | FastAPI + signed RS256 JWT + explicit PostgreSQL membership and versioned JSONB records | **14 tests**: tenant isolation, revocation, signature checks, optimistic updates, idempotent replay and outage failure; actual PostgreSQL 16 | Synthetic IdP only; no production RLS, TLS, OAuth login |
 | **[06 - Webhook Reliability & Recovery](projects/06_resilient_webhook_pipeline/)** | Local signed HTTP ingress, SQLite event queue, leasing, retry and dead-letter recovery | **16 tests**: HMAC, concurrent deliveries, crash recovery, auditability and manual reconciliation | CRM adapter mocked; no vendor n8n runtime |
 | **[07 - Transactional Data Reconciliation](projects/07_data_reconciliation_lab/)** | CSV validation, SQLite atomic import, idempotency, optimistic revisions and quarantine | **21 tests**: dry-run, rollback, version conflicts and concurrent batch processing | CSV/SQLite laboratory, not customer ERP/DB migration |
 | **[01-05 - Targeted integrations](projects/)** | Small isolated Python prototypes for tenant notes, leads, human review, API contracts and Docker configuration | **10 tests** across five deliberately bounded samples | Demonstration modules, not customer-ready platforms |
 
-**Public test evidence:** **61 tests across 8 projects** (47 earlier + 14 PostgreSQL/HTTP tests). CI uses Python **3.11 and 3.12** with an actual disposable PostgreSQL 16 service, runs all demos, and audits public Git history for secrets. [Inspect live GitHub Actions](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions).
+**Public test evidence:** **75 tests across 9 projects** (61 Level 2 tests + 14 new database-enforced RLS tests). CI uses Python **3.11 and 3.12** with an actual disposable PostgreSQL 16 service, runs all demos, and audits public Git history for secrets. [Inspect live GitHub Actions](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions).
 
 **Private engineering baseline (not publicly distributed):** 25 reusable starter-kit families mapped to 30 scoped service directions; **313 tests passing locally** against a separate disposable PostgreSQL 16, and private CI passing on Python 3.11/3.12, Docker smoke and dependency review as of **9 November 2026**. Private-kit tests are **not runnable or independently reviewable from this public repository**. The private source, bundle, supplier/customer secrets and internal build assets are not published.
+
+## Level 3 specialist evidence (not a production credential)
+
+The [PostgreSQL RLS and recovery lab](projects/09_postgres_rls_recovery/) is our **first Level 3 specialization proof**: 14 additional tests of actual database-enforced tenant isolation plus a verified restore into a second isolated database in the same disposable container. It is **not** 14 enterprise deployments, a SOC 2 audit or experience running Supabase production systems. See the [targeted Level 3 readiness plan](docs/LEVEL3_SPECIALIST_READINESS_20261109.md).
 
 ## What makes this Level 2 work
 
