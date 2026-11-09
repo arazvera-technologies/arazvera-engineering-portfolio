@@ -4,7 +4,7 @@
 
 We build scoped backend and automation solutions with testable acceptance criteria, explicit failure handling, and clean delivery documentation. This public repository hosts **nine independently runnable, synthetic engineering case studies** (not deployed customer systems). It deliberately excludes the proprietary ARAZVERA starter-kit library and all customer credentials.
 
-**[Explore the advanced Level 2 service catalog](catalog/ARAZVERA_Level2_Client_Engineering_Catalog_EN_20261109.pdf)** | **[Level 2 resume (PDF)](resumes/level-2/ARAZVERA_Level2_Backend_Systems_Resume_EN.pdf)** | **[Service verification matrix](docs/LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md)** | **[CI test runs](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions)**
+**[Level 3 specialist resume (PDF)](resumes/level-3/ARAZVERA_Level3_Backend_Reliability_Specialist_Profile_EN_20261109.pdf)** | **[Level 3 Word](resumes/level-3/ARAZVERA_Level3_Backend_Reliability_Specialist_Profile_EN_20261109.docx)** | **[Explore the advanced Level 2 service catalog](catalog/ARAZVERA_Level2_Client_Engineering_Catalog_EN_20261109.pdf)** | **[Level 2 resume (PDF)](resumes/level-2/ARAZVERA_Level2_Backend_Systems_Resume_EN.pdf)** | **[Service verification matrix](docs/LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md)** | **[CI test runs](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions)**
 
 ## Featured engineering case studies
 
