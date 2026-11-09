@@ -1,16 +1,33 @@
-name: Public engineering prototypes — executable tests and release audit
+name: Public Level 2 engineering cases - tested with PostgreSQL
+
 on:
   push:
   pull_request:
+
 permissions:
   contents: read
+
 jobs:
   engineering-demos:
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         python: ['3.11', '3.12']
-    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: avdemo
+          POSTGRES_PASSWORD: synthetic_only
+          POSTGRES_DB: avdemo
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U avdemo -d avdemo"
+          --health-interval 5s --health-timeout 5s --health-retries 15
+    env:
+      ARAZVERA_PUBLIC_TEST_PG_DSN: postgresql://avdemo:synthetic_only@127.0.0.1:5432/avdemo
     steps:
       - uses: actions/checkout@v4
         with:
@@ -18,12 +35,21 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
-      - name: Run all demos and full tests (no paid API or cloud dependencies)
+      - name: Install dependencies for public integration sample
+        run: python -m pip install -r projects/08_postgres_auth_contract/requirements.txt
+      - name: Assert real PostgreSQL is available
+        run: |
+          python - <<'PY'
+          import os,psycopg
+          with psycopg.connect(os.environ["ARAZVERA_PUBLIC_TEST_PG_DSN"], connect_timeout=5) as db:
+              assert db.execute("SELECT version()").fetchone()[0].startswith("PostgreSQL 16")
+          PY
+      - name: Run all public demos and tests with fail-fast execution
         shell: bash
         run: |
           set -euo pipefail
           for project in projects/*; do
             (cd "$project" && python demo.py && python -m unittest discover -s tests -v)
           done
-      - name: Scan public files and full Git history for secrets
+      - name: Scan public files and complete Git history
         run: python tools/public_release_audit.py --root . --history --report /tmp/public_release_audit.json
