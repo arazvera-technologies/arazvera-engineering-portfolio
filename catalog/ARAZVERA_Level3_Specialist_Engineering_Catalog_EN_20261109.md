@@ -80,6 +80,16 @@
 
 **Boundary:** This is **not** a real cross-host network partition, physical node shutdown, production database failover or enterprise RTO/RPO guarantee. The laboratory did not alter firewall settings, customer credentials or live infrastructure. Deploying such tests to client environments requires written consent, safety limits, monitoring, recovery plans and separate customer approval.
 
+## J. Tenant incident monitoring and durable alert delivery
+
+**Customer problem:** a SaaS tenant's operational incident is silently missed, a brief transient condition floods the on-call team, or a downstream notification service loses an acknowledgement and generates duplicate escalation.
+
+**Scoped deliverables:** tenant-aware queue observation and incident criteria, RLS-scoped read permissions, incident state and debounce rules, durable alert outbox, receiver idempotency and retry contracts, staging fault drills, recovery notifications, diagnostic report and an incident escalation runbook. A 24/7 deployment, real incident paging provider and reliable on-call scheduling must be separately scoped and accepted.
+
+**Verified private laboratory:** A one-shot synthetic monitor polled signed JWT-protected FastAPI queue readiness for two different FORCE RLS PostgreSQL tenants. **107 unit tests passed** across the private suite. A real **11-check FastAPI/PostgreSQL/Worker/SQLite alert journal and separate HTTP receipt-receiver integration** passed three consecutive local runs and the complete sequential private GitHub Actions acceptance gate. The synthetic scenario opened a tenant-only backlog incident, preserved an alert after an ambiguous HTTP 503 acknowledgement, deduplicated a retry at the receiver, persisted the journal across a fresh Python process, closed the incident after worker recovery, opened a new incident for a dead letter, and delivered after a restarted receiver. Final receiver accounting held three unique receipts and no unsent alerts.
+
+**Boundary:** This is one-shot localhost monitoring, **not** a 24/7 installed alert service, a managed alert provider integration, an uptime/SLO measurement, on-call escalation, production disaster recovery or HA replicated SQLite solution. No external notification was sent. At-least-once sender delivery relies on a cooperative receiver's idempotency for deduplication.
+
 ## Verification register — dated 9 November 2026
 
 | Asset | Verified | Scope limit |
@@ -95,6 +105,7 @@
 | Per-tenant queue incident readiness | **47 local tests + 19 end-to-end checks repeated three times; all four private CI jobs passed** | Queue-specific lab control only, not real SLO or production release authorization |
 | Private pinned RS256/JWKS token verification | **77 unit tests on Python 3.11/3.12 + 13 new live identity tests; full sequential private CI PASS** | Mock issuer, loopback HTTP and synthetic tenant roles; not a complete enterprise OIDC/SSO deployment |
 | Simulated TCP transport failure and DB rollback | **9 synthetic checks passed in 4 local runs and in the final private sequential CI** | One physical host and localhost proxy; no real cross-host partition, HA failover or guaranteed RTO/RPO |
+| Tenant incident monitoring and durable alert outbox | **107 private unit tests + 11-check end-to-end lab on three runs, complete sequential CI PASS** | One-shot synthetic polling; SQLite on one host and localhost mock receiver; not 24/7 or externally integrated alerting |
 | Existing private Level 2 accelerators | **25 families / 313 recorded local tests** | Separate nonpublic baseline, not publicly reviewable |
 
 These counts refer to different suites; they are not customer deployments. No claim of SOC 2 accreditation, guaranteed uptime, signed penetration test or proven cross-region recovery is made.
