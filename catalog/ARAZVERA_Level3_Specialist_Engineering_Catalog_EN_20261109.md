@@ -70,6 +70,16 @@
 
 **Explicit limit:** The issuer implements only OIDC-compatible metadata and public JWKS, **not** a complete OIDC authorization-code/PKCE sign-in flow, corporate IAM, HTTPS production identity service, customer access control, multi-host recovery or security certification. The public-key cache has a bounded revocation delay. A successful synthetic lab cannot be sold as a fully integrated enterprise SSO deployment.
 
+## I. Network-path fault injection and transactional recovery
+
+**Customer problem:** an API or background worker silently accepts incomplete work during a database transport outage, retries a failed operation unsafely, or leaves the business transaction and event queue inconsistent.
+
+**Scoped deliverables:** authorized staging fault matrix, synthetic transport-path interruption, bounded failure responses, atomic business/outbox rollback checks, safe replay/reconciliation evidence, tenant-level incident readiness, runbook and handover. Multi-host failover and RTO/RPO must be scoped and demonstrated separately.
+
+**Verified lab:** A disposable PostgreSQL 16 container, FastAPI and independent Worker used a private loopback TCP relay that can interrupt existing synthetic SQL connections and refuse new ones. **Nine acceptance assertions passed on four local executions and in the single successful private GitHub Actions acceptance gate**. The lab verified HTTP 503 and no phantom events during an outage, termination of an in-flight uncommitted business/outbox transaction, atomic rollback of both records, recovery without PostgreSQL restart, safe reprocessing after reconnection and restoration of staging queue readiness.
+
+**Boundary:** This is **not** a real cross-host network partition, physical node shutdown, production database failover or enterprise RTO/RPO guarantee. The laboratory did not alter firewall settings, customer credentials or live infrastructure. Deploying such tests to client environments requires written consent, safety limits, monitoring, recovery plans and separate customer approval.
+
 ## Verification register — dated 9 November 2026
 
 | Asset | Verified | Scope limit |
@@ -84,6 +94,7 @@
 | Authenticated FastAPI + tenant RLS + worker integration | **15 local integration checks + 4 private CI jobs passed** | Lab-issued JWTs, two synthetic tenant roles, one physical host, no external delivery or production identity provider |
 | Per-tenant queue incident readiness | **47 local tests + 19 end-to-end checks repeated three times; all four private CI jobs passed** | Queue-specific lab control only, not real SLO or production release authorization |
 | Private pinned RS256/JWKS token verification | **77 unit tests on Python 3.11/3.12 + 13 new live identity tests; full sequential private CI PASS** | Mock issuer, loopback HTTP and synthetic tenant roles; not a complete enterprise OIDC/SSO deployment |
+| Simulated TCP transport failure and DB rollback | **9 synthetic checks passed in 4 local runs and in the final private sequential CI** | One physical host and localhost proxy; no real cross-host partition, HA failover or guaranteed RTO/RPO |
 | Existing private Level 2 accelerators | **25 families / 313 recorded local tests** | Separate nonpublic baseline, not publicly reviewable |
 
 These counts refer to different suites; they are not customer deployments. No claim of SOC 2 accreditation, guaranteed uptime, signed penetration test or proven cross-region recovery is made.
