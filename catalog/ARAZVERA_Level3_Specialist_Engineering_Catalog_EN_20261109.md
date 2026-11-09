@@ -60,6 +60,16 @@
 
 **Verified lab:** The private incident readiness module passed **47 local unit tests** and **19 end-to-end acceptance checks on three successive runs**. PostgreSQL FORCE RLS and JWT ops:read constrain queue observations by tenant. Real synthetic drills verified tenant A backlog or dead letter => tenant A HOLD, tenant B unaffected, and recovery after workers clear a backlog => staging observation PASS. All four relevant private CI jobs passed. The observed SHA256 digest does not sign telemetry; there is no real SLO, 24/7 alert transport, enterprise identity provider or approved automated failover.
 
+## H. Public-key JWT verification and enterprise identity hardening
+
+**Customer problem:** signature algorithm confusion, stale signing keys, incorrect issuer/audience trust, single-tenant scope leakage and unpredictable identity-provider outages.
+
+**Scoped deliverables:** identity threat-model and token contract review; issuer/audience/JWKS pinning; RSA signing-key rotation and revocation test matrix; strict claims and scope verification; tenant-to-database privilege separation; staged fail-closed outage drills; incident acceptance evidence and an English deployment handover. Connecting a real corporate OIDC provider, HTTPS, key management and operational support must be separately authorized and tested.
+
+**Verified synthetic evidence:** A private opt-in **RS256/JWKS verification module** with a separate mock metadata/identity process was implemented. **30 new OIDC tests** increased the private outbox/incident suite to **77 passing unit tests** on both Python 3.11 and Python 3.12. A new **13-check live mock-JWKS / FastAPI / PostgreSQL 16 integration lab** passed: forged/expired/wrong issuer/wrong audience tokens rejected, HS256 downgrade blocked, rotated signing keys accepted and revoked keys rejected after refresh, JWKS outages failed closed, and the original restricted PostgreSQL tenant boundaries remained intact. The prior 19-check FastAPI/worker incident lab and original transactional outbox Docker test also passed in the **single successful sequential private GitHub Actions acceptance run** on 9 November 2026.
+
+**Explicit limit:** The issuer implements only OIDC-compatible metadata and public JWKS, **not** a complete OIDC authorization-code/PKCE sign-in flow, corporate IAM, HTTPS production identity service, customer access control, multi-host recovery or security certification. The public-key cache has a bounded revocation delay. A successful synthetic lab cannot be sold as a fully integrated enterprise SSO deployment.
+
 ## Verification register — dated 9 November 2026
 
 | Asset | Verified | Scope limit |
@@ -73,6 +83,7 @@
 | Private PostgreSQL transactional outbox | **21 unit tests + 12 Docker integration checks; 8 workers, 120 distinct initial events; same-transaction business COMMIT/ROLLBACK; private CI successful** | Single-host lab, no external provider delivery or independently authenticated DB tenant role |
 | Authenticated FastAPI + tenant RLS + worker integration | **15 local integration checks + 4 private CI jobs passed** | Lab-issued JWTs, two synthetic tenant roles, one physical host, no external delivery or production identity provider |
 | Per-tenant queue incident readiness | **47 local tests + 19 end-to-end checks repeated three times; all four private CI jobs passed** | Queue-specific lab control only, not real SLO or production release authorization |
+| Private pinned RS256/JWKS token verification | **77 unit tests on Python 3.11/3.12 + 13 new live identity tests; full sequential private CI PASS** | Mock issuer, loopback HTTP and synthetic tenant roles; not a complete enterprise OIDC/SSO deployment |
 | Existing private Level 2 accelerators | **25 families / 313 recorded local tests** | Separate nonpublic baseline, not publicly reviewable |
 
 These counts refer to different suites; they are not customer deployments. No claim of SOC 2 accreditation, guaranteed uptime, signed penetration test or proven cross-region recovery is made.
