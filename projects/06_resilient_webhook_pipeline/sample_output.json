@@ -1,0 +1,26 @@
+{
+  "demo": "ARAZVERA Level 2 reliable webhook processing",
+  "http_intake_status": 201,
+  "first_intake_created": true,
+  "first_attempt": "retry",
+  "early_retry_blocked": true,
+  "second_attempt": "complete",
+  "mock_calls": 2,
+  "queue_counts": {
+    "pending": 0,
+    "leased": 0,
+    "retry": 0,
+    "needs_review": 0,
+    "complete": 1,
+    "dead_letter": 0
+  },
+  "audit_actions": [
+    "accepted",
+    "leased",
+    "retry_scheduled",
+    "leased",
+    "completed"
+  ],
+  "persistence_verified": true,
+  "production_approved": false
+}

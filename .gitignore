@@ -1,0 +1,17 @@
+# Local-only artifacts: do not publish
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.env
+.env.*
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.pem
+*.key
+*.bundle
+*.zip
+.venv/
+venv/

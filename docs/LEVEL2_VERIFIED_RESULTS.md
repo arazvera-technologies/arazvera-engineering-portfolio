@@ -1,22 +1,37 @@
 # ARAZVERA — Verified Engineering Evidence (09 Nov 2026)
 
-## Separate test counts, not a combined certification
+**Evidence categories must remain separate. These are not certifications or commercial-production acceptance.**
 
-- Level 1 historical baseline: **172 passing Python tests**, across four restored, private engineering-kit repositories. These are development environment tests. No production uptime has been verified.
-- Level 2 private prototypes (five projects plus safe client generator): **11 passing Python tests**, independently restored and retested from a local private Git recovery bundle.
-- Level 2 public synthetic demos: **10 passing built-in `unittest` cases**, two per independent, runnable demo.
+| Evidence | Locally verified results | Scope |
+| --- | --- | --- |
+| Level 1 private recovery | 172 tests PASS | Four separately restored engineering-kit repositories (historical) |
+| Level 2 private engineering | 16 tests PASS | Five private prototypes / generator; private commit 93607b8 |
+| Private Docker runtime CI | 3 jobs PASS in earlier recorded pipeline | Python 3.12 synthetic Docker delivery, local HTTP health and restricted runtime. NOT n8n runtime |
+| Original five public examples | 10 tests PASS | Two tests per independent synthetic Python demonstration |
+| New public flagship, project 06 | **16 tests PASS** in local Windows Python 3.12 | Actual localhost HTTP, HMAC verification, concurrency, SQLite durable processing, backoff, dead-letter, review and lease failure paths |
+| Public combined local tests | **26 tests PASS** (10 original + 16 new) | No external API, paid cloud provider, or customer production environment |
 
-These groups are distinct deliverables. The counts do not certify external APIs, SaaS availability, external training, customer integrations or commercial deployment safety.
+## Evidence and actual commands
 
-## Current GitHub Actions
+Project 06: enter projects/06_resilient_webhook_pipeline and execute:
 
-- [Private Level 2 build - PASS](https://github.com/arazvera-technologies/arazvera-level2-private-engineering-portfolio/actions/runs/42532266274): Python tests and dependency review passed. The private source is not shared publicly.
-- [Public Level 2 sample build - PASS](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42532374737): all five synthetic samples ran, local Python tests passed, and file/history safety scan completed.
+~~~bash
+python demo.py
+python -m unittest discover -s tests -v
+~~~
 
-## Real local n8n demonstration
+Observed local demo: HTTP 201, initial synthetic CRM retry, backoff hold, second successful attempt, process-reopen state complete, auditable transitions; zero failed tests (16 run).
 
-A separate, isolated local n8n-to-FastAPI lead-intake demonstration passed five synthetic end-to-end HTTP scenarios (201, 200, 422, 202, 503). The two-minute video has not been verified as publicly accessible; therefore it is deliberately not linked in this public repository.
+Full public repository CI now checks each public project on Python **3.11 and 3.12** and scans the entire checked-out history. The new CI result must be observed on GitHub before it can be called green.
 
-## Production and licensing boundaries
+Earlier verified jobs (prior to this update):
+- [Private Level 2 Actions run](https://github.com/arazvera-technologies/arazvera-level2-private-engineering-portfolio/actions/runs/42532266274)
+- [Previous public sample Actions run](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42532374737)
 
-No Level 2 prototype is production ready. The self-hosted n8n engine release gate remains blocked pending vendor-supported security acceptance. Any client-owned n8n Cloud deployment requires account ownership, authorized live backend access, credentials, real end-to-end tests and a separate license/contract acceptance.
+## Material release limits
+
+The new project is a **local synthetic interoperability lab**, not a licensed managed integration or a public Internet-ready API. The HMAC fixture key and demo admin token are fake. Commercial deployment requires an approved identity provider, security/privacy review, customer-owned provider accounts, stable database, load and recovery tests and a separate owner acceptance.
+
+A real, isolated n8n-to-FastAPI execution passed five synthetic HTTP scenarios (201/200/422/202/503), but the full self-hosted n8n runtime remains **BLOCKED** for production pending supported remediation. The two-minute recorded video is not linked until public-access permissions are verified.
+
+Refer to [the Level 2 global services matrix](LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md) for every service's proof status and next development milestone. A job listing is not an engagement, qualification or guaranteed rate.

@@ -1,11 +1,15 @@
-name: Public synthetic sample verification
+name: Public engineering prototypes — executable tests and release audit
 on:
   push:
   pull_request:
 permissions:
   contents: read
 jobs:
-  synthetic-samples:
+  engineering-demos:
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12']
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -13,12 +17,13 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
-      - name: Execute each independent sample and tests
+          python-version: ${{ matrix.python }}
+      - name: Run all demos and full tests (no paid API or cloud dependencies)
+        shell: bash
         run: |
           set -euo pipefail
           for project in projects/*; do
             (cd "$project" && python demo.py && python -m unittest discover -s tests -v)
           done
-      - name: Scan all public files and complete Git history
+      - name: Scan public files and full Git history for secrets
         run: python tools/public_release_audit.py --root . --history --report /tmp/public_release_audit.json
