@@ -44,6 +44,14 @@
 
 **Evidence today:** A new private PostgreSQL 16 kit passed **21 unit tests on Python 3.11/3.12 and a real Docker integration job** in GitHub Actions. The single-host lab used **8 concurrent Python workers**, processed **120 distinct initial synthetic events** without duplicate claims, then recovered an abandoned lease, rejected a stale acknowledgment, exhausted a poison job, and safely dead-lettered two expired final-attempt leases. A separate business-state/outbox integration test verified both atomic COMMIT and atomic ROLLBACK on the caller-owned PostgreSQL transaction. Final accounting: **122 delivered jobs / 3 dead-letter jobs**. These are database-local receipts, **not** proof of exactly-once external API side effects, authenticated tenant identity, or production-scale performance.
 
+## F. Authenticated tenant API and operational queue monitoring
+
+**Customer problem:** SaaS endpoints that rely on client-supplied tenant IDs, use overprivileged queue workers, or lack tenant-separated operational visibility.
+
+**Scoped deliverables:** FastAPI authentication and authorization integration, restricted PostgreSQL roles and FORCE RLS, atomic business/outbox transactions, an independent queue worker, permission-controlled per-tenant queue health, process-restart checks, acceptance tests and an operational handover. Production IAM, monitoring alerting and deployment are separately scoped.
+
+**Verified evidence:** The private integrated lab exercised three live local components: Uvicorn/FastAPI, PostgreSQL 16 Docker and an independently executed Python worker. It passed **15 synthetic integration acceptance checks**, including JWT signature/issuer/audience/expiry/scopes, different tenant database LOGINS, denied cross-tenant SQL reads/writes, restricted worker permissions, 18 database-local deliveries, atomic rollback, API restart durability, and queue metrics protected by a distinct ops:read scope. **All four private GitHub Actions jobs succeeded**, including the Python 3.11/3.12 unit-test matrix and both PostgreSQL Docker labs. No live customer IAM, public ingress, independent physical host, production SLA or external exactly-once API delivery is claimed.
+
 ## Verification register — dated 9 November 2026
 
 | Asset | Verified | Scope limit |
@@ -55,6 +63,7 @@
 | Concurrent tenant and crash-recovery lab | **600 synthetic transaction attempts; rollback, replay and tenant RLS PASS in local Docker and private CI** | Up to 12 benchmark clients on one host; not a production-scale load or node-failure test |
 | Private Level 3 release/SLO/signed evidence modules | **61 passing local tests** and passing Python 3.11/3.12 CI | HMAC test keys and offline observations; no live IAM or deployment |
 | Private PostgreSQL transactional outbox | **21 unit tests + 12 Docker integration checks; 8 workers, 120 distinct initial events; same-transaction business COMMIT/ROLLBACK; private CI successful** | Single-host lab, no external provider delivery or independently authenticated DB tenant role |
+| Authenticated FastAPI + tenant RLS + worker integration | **15 local integration checks + 4 private CI jobs passed** | Lab-issued JWTs, two synthetic tenant roles, one physical host, no external delivery or production identity provider |
 | Existing private Level 2 accelerators | **25 families / 313 recorded local tests** | Separate nonpublic baseline, not publicly reviewable |
 
 These counts refer to different suites; they are not customer deployments. No claim of SOC 2 accreditation, guaranteed uptime, signed penetration test or proven cross-region recovery is made.
