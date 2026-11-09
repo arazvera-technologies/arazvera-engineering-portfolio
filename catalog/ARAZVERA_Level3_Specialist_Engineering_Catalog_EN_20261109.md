@@ -19,6 +19,8 @@
 
 **Evidence today:** The public lab tested an isolated restore into a second database on the **same server**. A new private Level 3 recovery evidence verifier compares canonical tenant data, role privileges, RLS policy declarations and visibility probes. **17 local tests and private GitHub Actions CI passed.** Its input is observed snapshots; different cluster IDs alone cannot establish an actual cross-host restore. That remains an explicit next acceptance milestone.
 
+**Additional tested Level 3 recovery lab:** On 9 November 2026, a real PostgreSQL 16 custom-format backup was restored from one disposable cluster into a second, separately initialized cluster. Role provisioning, independent PostgreSQL system identifiers, restored RLS policy enforcement, tenant-login isolation, and canonical data equality all passed locally and in a separate private GitHub Actions integration job. Both containers were on **one physical computer**, with no network access or exposed ports. This does **not** prove recovery across physical servers, regions or production environments.
+
 ## C. Webhook and API resilience
 **Customer problem:** lost or duplicated callbacks, retries that exceed policy and untraceable partial failure.
 
@@ -40,6 +42,7 @@
 | Public portfolio | **9 synthetic cases / 75 tests** | Python 3.11/3.12 CI and disposable PostgreSQL 16 where needed |
 | Level 3 PostgreSQL RLS evidence | **14 of the 75 public tests** | Same-server recovery laboratory |
 | Private Level 3 recovery verifier | **17 passing local tests** and passing CI | Not a real independent-server restore |
+| Separate PostgreSQL cluster restore lab | **Local LAB_PASS + private Docker integration CI success** | Two real clusters on the same physical host; no external disaster recovery |
 | Private Level 3 release/SLO modules | **33 passing local tests** and passing CI | Not deployed observability or production operations |
 | Existing private Level 2 accelerators | **25 families / 313 recorded local tests** | Separate nonpublic baseline, not publicly reviewable |
 
