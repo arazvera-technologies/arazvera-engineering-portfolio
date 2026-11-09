@@ -22,7 +22,7 @@ python -m unittest discover -s tests -v
 
 Observed local demo: HTTP 201, initial synthetic CRM retry, backoff hold, second successful attempt, process-reopen state complete, auditable transitions; zero failed tests (16 run).
 
-Full public repository CI now checks each public project on Python **3.11 and 3.12** and scans the entire checked-out history. The new CI result must be observed on GitHub before it can be called green.
+The new public GitHub Actions run [#42571777541](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42571777541) completed successfully for **Python 3.11 and Python 3.12**, including six executable demos, all public tests and the full-history secret scan. This is CI evidence for a synthetic reference lab, not an independent security certification.
 
 Earlier verified jobs (prior to this update):
 - [Private Level 2 Actions run](https://github.com/arazvera-technologies/arazvera-level2-private-engineering-portfolio/actions/runs/42532266274)
