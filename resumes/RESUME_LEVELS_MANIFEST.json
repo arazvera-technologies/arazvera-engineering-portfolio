@@ -1,0 +1,29 @@
+{
+  "base_commit": "f26980c7082bd9cc61d5cb8d9e462a85b870e025",
+  "files": {
+    "L1_PDF": {
+      "bytes": 52109,
+      "path": "resumes/level-1/ARAZVERA_Level1_Engineering_Resume_EN.pdf",
+      "sha256": "77622e284deadd2bcca7fbcfd611d46ca58d896fcf7e36421829aa2aabfeccdf"
+    },
+    "L1_WORD": {
+      "bytes": 39028,
+      "path": "resumes/level-1/ARAZVERA_Level1_Engineering_Resume_EN.docx",
+      "sha256": "ebd5cfa2a536ff332499bcf78da91717e7549a8ef1758d0a22a2c9d088244643"
+    },
+    "L2_PDF": {
+      "bytes": 56263,
+      "path": "resumes/level-2/ARAZVERA_Level2_Backend_Systems_Resume_EN.pdf",
+      "sha256": "5e6a2b8adb5cb20b2736fc567a24f04afe21dfef93377b1904249665cb46f3b1"
+    },
+    "L2_WORD": {
+      "bytes": 40872,
+      "path": "resumes/level-2/ARAZVERA_Level2_Backend_Systems_Resume_EN.docx",
+      "sha256": "acd5754ac4fe8193e1e1546ae8757341fad59b5593bdddb9a31c5fe1cff4362e"
+    }
+  },
+  "format": "ARAZVERA_PUBLIC_RESUME_LEVELS_V1",
+  "legacy_files_preserved": true,
+  "level1_private_repo_changed": false,
+  "level2_private_repo_changed": false
+}

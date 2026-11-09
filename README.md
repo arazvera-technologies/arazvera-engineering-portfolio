@@ -4,16 +4,29 @@
 
 An independent, public engineering portfolio showcasing **runnable synthetic prototypes**, real tests, and detailed limits. Level 2 is our internal delivery tier for scoped multi-component client projects, **not a certification**. This repository deliberately contains no private customer starter-kit sources, keys or commercial client data.
 
-## 01 — Engineering Resumes
+## 01 — Engineering Resumes | Choose Your Project Level
 
-- [NEW: Advanced Level 2 Systems Engineering résumé (PDF, verified projects and failure-mode engineering)](resumes/ARAZVERA_Level2_Advanced_Systems_Resume_EN_20261109.pdf)
-- [Advanced Level 2 résumé (editable Word)](resumes/ARAZVERA_Level2_Advanced_Systems_Resume_EN_20261109.docx)
-- [Previous Level 2 résumé snapshot (PDF)](resumes/ARAZVERA_Level2_Engineering_Resume_EN.pdf)
-- [Previous Level 2 résumé snapshot (Word)](resumes/ARAZVERA_Level2_Engineering_Resume_EN.docx)
-- [Level 1 résumé (PDF)](resumes/ARAZVERA_Level1_Engineering_Resume_EN.pdf)
-- [Level 1 résumé (editable Word)](resumes/ARAZVERA_Level1_Engineering_Resume_EN.docx)
+**[Separate Level 1 and Level 2 resume directory](resumes/README.md)**
 
-**New advanced résumé and catalog** are grounded in projects 06 and 07, with direct code and passing CI evidence. The [Level 2 global services and proof matrix](docs/LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md) separates tested examples, private starters and not-yet-built capabilities. The earlier Level 2 documents are retained only as historical snapshots.
+### [Level 1 — Focused Python & Automation](resumes/level-1/README.md)
+
+For smaller, bounded scripts, debugging and lightweight API/automation work.
+
+- [**Current Level 1 resume — PDF**](resumes/level-1/ARAZVERA_Level1_Engineering_Resume_EN.pdf)
+- [Level 1 editable Word](resumes/level-1/ARAZVERA_Level1_Engineering_Resume_EN.docx)
+
+Four separate Level 1 private engineering kits remain unchanged; **172 historical Level 1 recovery tests** are a separate baseline.
+
+### [Level 2 — Backend Systems, API Integration & Reliability](resumes/level-2/README.md)
+
+For multi-step backend, Webhook processing, error recovery and safe data-integration projects.
+
+- [**Current Level 2 advanced resume — PDF (two pages)**](resumes/level-2/ARAZVERA_Level2_Backend_Systems_Resume_EN.pdf)
+- [Current Level 2 editable Word](resumes/level-2/ARAZVERA_Level2_Backend_Systems_Resume_EN.docx)
+
+**Evidence:** Seven public runnable projects, **47 tests** with Python 3.11 and 3.12 [GitHub Actions passing](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42574597847). Featured [Webhook recovery](projects/06_resilient_webhook_pipeline/) and [safe data reconciliation](projects/07_data_reconciliation_lab/) cases are linked directly. The 16 private Level 2 tests are counted separately. Synthetic work is not a customer production deployment.
+
+Legacy PDF/DOCX URLs at the old `resumes/` root are retained, but are **historical**. For current documents, use the level-specific links above.
 
 ## 02 — Public Runnable Projects
 
