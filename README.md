@@ -41,7 +41,7 @@ The five earlier synthetic examples are **smaller** than the flagship and demons
 4. [Mock API adapter and HMAC](projects/04_api_integration/) — 2 tests
 5. [Docker configuration readiness](projects/05_docker_delivery/) — 2 tests, with separate private Docker runtime CI evidence
 
-**Public automated tests:** 10 in the original five samples + 16 for project 06 + 21 for project 07 = **47 locally verified cases**. Prior [GitHub Actions run #42572071973](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42572071973) proved six demos on Python 3.11/3.12; project 07 requires its own CI run before claiming new remote acceptance.
+**Public automated tests:** 10 in the original five samples + 16 for project 06 + 21 for project 07 = **47 verified test cases**. [GitHub Actions run #42573061378](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42573061378) passed all seven executable projects and security checks on Python **3.11 and 3.12**.
 
 **Private reference baseline:** Level 1 had 172 documented passing recovery tests across four independent repositories. Private Level 2 had 16 locally passing tests in a separately verified source revision, plus a Python 3.12 Docker smoke job in private CI. None of these counts imply a production SLA.
 

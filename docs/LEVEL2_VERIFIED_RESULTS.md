@@ -23,7 +23,7 @@ python -m unittest discover -s tests -v
 
 Observed local demo: HTTP 201, initial synthetic CRM retry, backoff hold, second successful attempt, process-reopen state complete, auditable transitions; zero failed tests (16 run).
 
-The previous public GitHub Actions run [#42572071973](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42572071973) completed successfully for **Python 3.11 and Python 3.12**, covering the first six executable demos and full-history secret scan. The new seven-project CI result must be checked separately before claiming remote verification.
+The latest [public GitHub Actions run #42573061378](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42573061378) completed successfully for **Python 3.11 and Python 3.12**. Both jobs executed all seven demonstrations and **47 tests**, plus the full-history secret scan. This is reproducible prototype evidence, not certification or deployment approval.
 
 Earlier verified jobs (prior to this update):
 - [Private Level 2 Actions run](https://github.com/arazvera-technologies/arazvera-level2-private-engineering-portfolio/actions/runs/42532266274)
