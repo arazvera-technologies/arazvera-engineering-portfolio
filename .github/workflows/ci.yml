@@ -49,6 +49,11 @@ jobs:
         run: |
           set -euo pipefail
           for project in projects/*; do
+            if [ "$(basename "$project")" = "09_postgres_rls_recovery" ]; then
+              echo "The RLS proof is tested in the dedicated Level 3 workflow."
+              continue
+            fi
+            test -f "$project/demo.py"
             (cd "$project" && python demo.py && python -m unittest discover -s tests -v)
           done
       - name: Scan public files and complete Git history

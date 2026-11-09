@@ -17,6 +17,15 @@ For larger scoped backend modules, signed Webhooks, failure recovery and transac
 - [**Current Level 2 editable Word**](level-2/ARAZVERA_Level2_Backend_Systems_Resume_EN.docx)
 - [CI: 47 tests, Python 3.11 and 3.12](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42574597847)
 
+## [Level 3 - Backend Reliability & Tenant-Isolation Specialization](level-3/README.md)
+
+For selected SaaS access-control failures, recoverable webhooks, database safety and RLS policy proof. This is a **capability-based specialist profile**, not a claim of prior enterprise production employment or formal security certification.
+
+- [**Level 3 specialist resume PDF**](level-3/ARAZVERA_Level3_Backend_Reliability_Specialist_Profile_EN_20261109.pdf)
+- [**Level 3 editable Word**](level-3/ARAZVERA_Level3_Backend_Reliability_Specialist_Profile_EN_20261109.docx)
+- [Database RLS case: 14 tests plus isolated restore drill](../projects/09_postgres_rls_recovery/)
+- [Verified evidence and limits](../docs/LEVEL3_SPECIALIST_READINESS_20261109.md)
+
 ## Historical file compatibility
 
 Older PDFs and Word files directly under `resumes/` are retained for backward-compatible URLs. **Use the level-specific links above for current resumes.** Those prior documents remain historical snapshots, not alternative current versions. No Level 1 or Level 2 private repository is changed by this public resume separation.
