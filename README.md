@@ -6,12 +6,14 @@ An independent, public engineering portfolio showcasing **runnable synthetic pro
 
 ## 01 — Engineering Resumes
 
-- [Level 2 engineering résumé (PDF)](resumes/ARAZVERA_Level2_Engineering_Resume_EN.pdf)
-- [Level 2 résumé (editable Word)](resumes/ARAZVERA_Level2_Engineering_Resume_EN.docx)
+- [NEW: Advanced Level 2 Systems Engineering résumé (PDF, verified projects and failure-mode engineering)](resumes/ARAZVERA_Level2_Advanced_Systems_Resume_EN_20261109.pdf)
+- [Advanced Level 2 résumé (editable Word)](resumes/ARAZVERA_Level2_Advanced_Systems_Resume_EN_20261109.docx)
+- [Previous Level 2 résumé snapshot (PDF)](resumes/ARAZVERA_Level2_Engineering_Resume_EN.pdf)
+- [Previous Level 2 résumé snapshot (Word)](resumes/ARAZVERA_Level2_Engineering_Resume_EN.docx)
 - [Level 1 résumé (PDF)](resumes/ARAZVERA_Level1_Engineering_Resume_EN.pdf)
 - [Level 1 résumé (editable Word)](resumes/ARAZVERA_Level1_Engineering_Resume_EN.docx)
 
-**New technical evidence:** [Level 2 global services and proof matrix](docs/LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md), which separates tested examples, private starters and not-yet-built capabilities. We update claims only after working tests, not by simply decorating an earlier résumé.
+**New advanced résumé and catalog** are grounded in projects 06 and 07, with direct code and passing CI evidence. The [Level 2 global services and proof matrix](docs/LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md) separates tested examples, private starters and not-yet-built capabilities. The earlier Level 2 documents are retained only as historical snapshots.
 
 ## 02 — Public Runnable Projects
 
@@ -48,8 +50,10 @@ The five earlier synthetic examples are **smaller** than the flagship and demons
 ## 03 — Services and Delivery Catalog
 
 - [Level 2 global project and service research matrix — 30 specific services, with proof status](docs/LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md)
-- [Level 2 engineering services catalog (PDF — earlier portfolio snapshot)](catalog/ARAZVERA_Level2_Premium_Engineering_Catalog_EN.pdf)
-- [Level 2 catalog (Word — earlier portfolio snapshot)](catalog/ARAZVERA_Level2_Premium_Engineering_Catalog_EN.docx)
+- [NEW: Advanced Level 2 Engineering Catalog (PDF, six project packages)](catalog/ARAZVERA_Level2_Advanced_Engineering_Catalog_EN_20261109.pdf)
+- [Advanced Level 2 Catalog (editable Word)](catalog/ARAZVERA_Level2_Advanced_Engineering_Catalog_EN_20261109.docx)
+- [Previous Level 2 catalog snapshot (PDF)](catalog/ARAZVERA_Level2_Premium_Engineering_Catalog_EN.pdf)
+- [Previous Level 2 catalog snapshot (Word)](catalog/ARAZVERA_Level2_Premium_Engineering_Catalog_EN.docx)
 - [Level 2 capability sheet (PDF)](catalog/ARAZVERA_Level2_Capability_Sheet_EN.pdf)
 - [Editable capability sheet (Word)](catalog/ARAZVERA_Level2_Capability_Sheet_EN.docx)
 - [Three contractor proposal drafts](catalog/ARAZVERA_Level2_Three_Proposal_Examples_EN.md)

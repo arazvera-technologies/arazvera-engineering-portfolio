@@ -35,4 +35,6 @@ The new project is a **local synthetic interoperability lab**, not a licensed ma
 
 A real, isolated n8n-to-FastAPI execution passed five synthetic HTTP scenarios (201/200/422/202/503), but the full self-hosted n8n runtime remains **BLOCKED** for production pending supported remediation. The two-minute recorded video is not linked until public-access permissions are verified.
 
+**Client-facing documentation refresh:** advanced Level 2 systems engineering résumé (PDF and editable Word) and the new six-package Level 2 engineering catalog (PDF and editable Word) have been drafted from verified projects 06 and 07. These are evidence-based marketing documents, not external certifications.
+
 Refer to [the Level 2 global services matrix](LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md) for every service's proof status and next development milestone. A job listing is not an engagement, qualification or guaranteed rate.
