@@ -21,6 +21,8 @@
 
 **Additional tested Level 3 recovery lab:** On 9 November 2026, a real PostgreSQL 16 custom-format backup was restored from one disposable cluster into a second, separately initialized cluster. Role provisioning, independent PostgreSQL system identifiers, restored RLS policy enforcement, tenant-login isolation, and canonical data equality all passed locally and in a separate private GitHub Actions integration job. Both containers were on **one physical computer**, with no network access or exposed ports. This does **not** prove recovery across physical servers, regions or production environments.
 
+**Additional verified failure-path evidence:** A short PostgreSQL 16 pgbench lab processed 600 synthetic transaction attempts across two restricted tenant logins (12 concurrent clients in total). It verified uniqueness/counter consistency, tenant RLS separation, rollback after deliberately terminating one in-flight backend transaction and idempotent retry. The private GitHub Actions integration job passed. This does not establish production throughput, automatic failover or an independent physical-server recovery drill.
+
 ## C. Webhook and API resilience
 **Customer problem:** lost or duplicated callbacks, retries that exceed policy and untraceable partial failure.
 
@@ -33,7 +35,7 @@
 
 **Scope:** evidence-based change gates, signed independent approval, staging rollback rehearsal, canary thresholds, per-tenant error/latency budget reviews and a release-blocker report.
 
-**Evidence today:** Two new private modules, Release Guard and Per-Tenant SLO Guard, passed **33 local tests** and private GitHub Actions CI. Their inputs are synthetic observations, not authenticated live monitoring feeds. They do not execute deployments or approve production release.
+**Evidence today:** Three private control modules - Release Guard, Per-Tenant SLO Guard and Signed Evidence Gate - passed **61 local unit tests** on Python 3.12, with private GitHub Actions passing on Python 3.11/3.12. Signed Evidence Gate binds reviewers, QA and client attestations to a canonical evidence digest using HMAC-SHA256 and prevents nonce replay with a local transactional SQLite store. The test identities, keys and observations are synthetic. No real IAM, live monitoring feed, production deployment or release approval is proven.
 
 ## Verification register — dated 9 November 2026
 
@@ -43,7 +45,8 @@
 | Level 3 PostgreSQL RLS evidence | **14 of the 75 public tests** | Same-server recovery laboratory |
 | Private Level 3 recovery verifier | **17 passing local tests** and passing CI | Not a real independent-server restore |
 | Separate PostgreSQL cluster restore lab | **Local LAB_PASS + private Docker integration CI success** | Two real clusters on the same physical host; no external disaster recovery |
-| Private Level 3 release/SLO modules | **33 passing local tests** and passing CI | Not deployed observability or production operations |
+| Concurrent tenant and crash-recovery lab | **600 synthetic transaction attempts; rollback, replay and tenant RLS PASS in local Docker and private CI** | Up to 12 benchmark clients on one host; not a production-scale load or node-failure test |
+| Private Level 3 release/SLO/signed evidence modules | **61 passing local tests** and passing Python 3.11/3.12 CI | HMAC test keys and offline observations; no live IAM or deployment |
 | Existing private Level 2 accelerators | **25 families / 313 recorded local tests** | Separate nonpublic baseline, not publicly reviewable |
 
 These counts refer to different suites; they are not customer deployments. No claim of SOC 2 accreditation, guaranteed uptime, signed penetration test or proven cross-region recovery is made.
