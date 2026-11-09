@@ -37,6 +37,13 @@
 
 **Evidence today:** Three private control modules - Release Guard, Per-Tenant SLO Guard and Signed Evidence Gate - passed **61 local unit tests** on Python 3.12, with private GitHub Actions passing on Python 3.11/3.12. Signed Evidence Gate binds reviewers, QA and client attestations to a canonical evidence digest using HMAC-SHA256 and prevents nonce replay with a local transactional SQLite store. The test identities, keys and observations are synthetic. No real IAM, live monitoring feed, production deployment or release approval is proven.
 
+## E. Transactional outbox, crashed workers and reliable event processing
+**Customer problem:** multi-worker callback/event queues that lose work, duplicate sends after a crash, retain exhausted leases indefinitely, or lack an auditable dead-letter path.
+
+**Scope:** design an authorized PostgreSQL-backed transactional outbox, replay-safe event IDs, atomic SKIP LOCKED claims, lease fencing, expiry recovery, bounded retry, dead-letter reconciliation, and fault-injection acceptance. Every external destination must separately support an idempotency key.
+
+**Evidence today:** A new private PostgreSQL 16 kit passed **21 unit tests on Python 3.11/3.12 and a real Docker integration job** in GitHub Actions. The single-host lab used **8 concurrent Python workers**, processed **120 distinct initial synthetic events** without duplicate claims, then recovered an abandoned lease, rejected a stale acknowledgment, exhausted a poison job, and safely dead-lettered two expired final-attempt leases. Final accounting: **121 delivered jobs / 3 dead-letter jobs**. These are database-local receipts, **not** proof of exactly-once external API side effects, authenticated tenant identity, or production-scale performance.
+
 ## Verification register — dated 9 November 2026
 
 | Asset | Verified | Scope limit |
@@ -47,6 +54,7 @@
 | Separate PostgreSQL cluster restore lab | **Local LAB_PASS + private Docker integration CI success** | Two real clusters on the same physical host; no external disaster recovery |
 | Concurrent tenant and crash-recovery lab | **600 synthetic transaction attempts; rollback, replay and tenant RLS PASS in local Docker and private CI** | Up to 12 benchmark clients on one host; not a production-scale load or node-failure test |
 | Private Level 3 release/SLO/signed evidence modules | **61 passing local tests** and passing Python 3.11/3.12 CI | HMAC test keys and offline observations; no live IAM or deployment |
+| Private PostgreSQL transactional outbox | **21 unit tests + 10 Docker integration checks; 8 workers, 120 distinct initial events; private CI successful** | Single-host lab, no external provider delivery or independently authenticated DB tenant role |
 | Existing private Level 2 accelerators | **25 families / 313 recorded local tests** | Separate nonpublic baseline, not publicly reviewable |
 
 These counts refer to different suites; they are not customer deployments. No claim of SOC 2 accreditation, guaranteed uptime, signed penetration test or proven cross-region recovery is made.
