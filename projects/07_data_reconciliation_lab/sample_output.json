@@ -1,0 +1,25 @@
+{
+  "demo": "ARAZVERA Level 2 atomic data reconciliation",
+  "preview_insertions": 2,
+  "preview_wrote_nothing": true,
+  "committed_insertions": 2,
+  "quarantined_invalid_rows": 1,
+  "identical_batch_replayed": true,
+  "revision_update_count": 1,
+  "fault_injection_rolled_back": true,
+  "persisted_records": [
+    {
+      "external_id": "sku-a",
+      "title": "Synthetic Book",
+      "quantity": 7,
+      "revision": 2
+    },
+    {
+      "external_id": "sku-b",
+      "title": "Sample Pen",
+      "quantity": 20,
+      "revision": 1
+    }
+  ],
+  "production_approved": false
+}

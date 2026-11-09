@@ -28,7 +28,7 @@ Level 3: broader architectures, multi-service operations, production SRE and com
 | 07 | CRM and lead integration | normalized intake, duplicates, review, mocked CRM adapter | PRIVATE STARTER, customer integration CLIENT DEPENDENCY | P0 |
 | 08 | API-to-API orchestration | two service adapters, typed mapping, negative-path tests | PRIVATE STARTER, mock adapters only | P0 |
 | 09 | Existing backend repair and hardening | bug reproduction, transaction review, regression suite | NEXT BUILD evidence pack | P0 |
-| 10 | Data import and synchronization | CSV/JSON validation, schema mapping, versioned reconciliation | NEXT BUILD | P0 |
+| 10 | Data import and synchronization | CSV/JSON validation, schema mapping, versioned reconciliation | **DEMO VERIFIED: public project 07** (CSV/SQLite); JSON provider integration NOT BUILT | P0 |
 | 11 | PostgreSQL schema and migration | Alembic revisions, rollback, constraints and data integrity | NEXT BUILD; PostgreSQL not verified here | P0 |
 | 12 | Dockerized delivery module | nonroot image, local health endpoint, read-only runtime, smoke tests | PRIVATE STARTER; previous Docker CI separately verified | P0 |
 | 13 | GitHub Actions and test automation | gated unit/integration tests, secret checks and audited release notes | DEMO VERIFIED for public repo CI baseline | P0 |
@@ -38,7 +38,7 @@ Level 3: broader architectures, multi-service operations, production SRE and com
 | 17 | CRM / ERP / inventory adapters | API mapping, stock event, audit and fault tests | NEXT BUILD, provider credentials CLIENT DEPENDENCY | P1 |
 | 18 | Structured logging and operational metrics | event-state metrics, privacy-safe logs, audit and dashboards | project 06 basic auditable state; monitoring NEXT BUILD | P1 |
 | 19 | Invoice and document automation | PDF reports, validated templates, business approval workflow | NEXT BUILD | P1 |
-| 20 | Data-quality and scheduled ETL | clean/dedup, import jobs, retry and reconciliation receipts | NEXT BUILD | P1 |
+| 20 | Data-quality and scheduled ETL | clean/dedup, import jobs, retry and reconciliation receipts | **PARTIAL: public project 07** (batch preview, quarantine, safe commit); scheduling NOT BUILT | P1 |
 | 21 | Human-reviewed AI intake | provider interface, uncertainty routing, user-approved records | PRIVATE STARTER with mock classifier; no live model | P1 |
 | 22 | LLM provider abstraction | typed outputs, fallback control, spend/rate-limit logging | NEXT BUILD; live usage CLIENT DEPENDENCY | P1 |
 | 23 | Lightweight internal reporting | operational statistics, filtered queries, client-safe export | NEXT BUILD | P1 |
@@ -60,11 +60,12 @@ Level 3: broader architectures, multi-service operations, production SRE and com
 ## Priority build sequence — capability before résumé
 
 1. Public project 06, real localhost signed HTTP + durable SQLite, concurrency, retry, unknown-outcome review: **implemented with 16 automated tests**.
-2. Harden the public multi-tenant example with a real transaction-oriented PostgreSQL test fixture and deny-by-default auth boundary.
-3. Publish a schema-migration and data-reconciliation lab: sample imports, bad-data quarantine, rollback tests.
-4. Add API integration contract testing for one fake CRM and one fake inventory service, with fault injection, timeouts and idempotent outbox.
-5. Introduce structured telemetry, customer-readable handover, and a Docker smoke-test matrix.
-6. Only after verifying additional capabilities update the Level 2 résumé/catalog so their technical claims surpass Level 1 and link directly to evidence.
+2. Public project 07, atomic import, dry-run, revision reconciliation, quarantine, injected rollback and 21 tests: **implemented locally**.
+3. Harden the public multi-tenant example with a real transaction-oriented PostgreSQL test fixture and deny-by-default auth boundary.
+4. Extend data reconciliation to actual schema migrations, typed JSON contracts and PostgreSQL transaction checks (not yet built).
+5. Add API integration contract testing for one fake CRM and one fake inventory service, with fault injection, timeouts and idempotent outbox.
+6. Introduce structured telemetry, customer-readable handover, and a Docker smoke-test matrix.
+7. Only after verifying additional capabilities update the Level 2 résumé/catalog so their technical claims surpass Level 1 and link directly to evidence.
 
 ## Differentiator: verified recovery, not flashy technology names
 

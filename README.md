@@ -27,6 +27,10 @@ An independent, public engineering portfolio showcasing **runnable synthetic pro
 
 Run with Python 3.11+ only; no paid APIs, cloud account, GPU or production n8n engine required. The demo has a functioning HTTP transport and a deliberately **mocked** CRM provider, not an active customer integration. All server listeners bind localhost.
 
+### Second advanced Level 2 case — Data integrity and migration
+
+**[07 — Atomic Data Reconciliation & Safe Import Lab](projects/07_data_reconciliation_lab/)** — a real CSV/SQLite system with **21 tests** for transaction-safe dry-run, idempotent batch import, versioned updates, quarantined records, concurrent same-batch processing, and injected-fault rollback. No paid provider or live customer data is used.
+
 ### Additional Level 2 topic samples
 
 The five earlier synthetic examples are **smaller** than the flagship and demonstrate isolated behavior, not complete client products:
@@ -37,7 +41,7 @@ The five earlier synthetic examples are **smaller** than the flagship and demons
 4. [Mock API adapter and HMAC](projects/04_api_integration/) — 2 tests
 5. [Docker configuration readiness](projects/05_docker_delivery/) — 2 tests, with separate private Docker runtime CI evidence
 
-**Public automated tests:** 10 in the original five samples + 16 for project 06 = **26 verified cases**. [GitHub Actions run #42571777541](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42571777541) passed on both Python 3.11 and 3.12, including the security scan.
+**Public automated tests:** 10 in the original five samples + 16 for project 06 + 21 for project 07 = **47 locally verified cases**. Prior [GitHub Actions run #42572071973](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42572071973) proved six demos on Python 3.11/3.12; project 07 requires its own CI run before claiming new remote acceptance.
 
 **Private reference baseline:** Level 1 had 172 documented passing recovery tests across four independent repositories. Private Level 2 had 16 locally passing tests in a separately verified source revision, plus a Python 3.12 Docker smoke job in private CI. None of these counts imply a production SLA.
 

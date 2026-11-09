@@ -9,7 +9,8 @@
 | Private Docker runtime CI | 3 jobs PASS in earlier recorded pipeline | Python 3.12 synthetic Docker delivery, local HTTP health and restricted runtime. NOT n8n runtime |
 | Original five public examples | 10 tests PASS | Two tests per independent synthetic Python demonstration |
 | New public flagship, project 06 | **16 tests PASS** in local Windows Python 3.12 | Actual localhost HTTP, HMAC verification, concurrency, SQLite durable processing, backoff, dead-letter, review and lease failure paths |
-| Public combined local tests | **26 tests PASS** (10 original + 16 new) | No external API, paid cloud provider, or customer production environment |
+| New public project 07 | **21 tests PASS**, locally verified | Atomic CSV/SQLite import, dry-run, version conflicts, quarantine, concurrency, injected rollback |
+| Public combined local tests | **47 tests PASS** (10 original + 16 project 06 + 21 project 07) | No external API, paid cloud provider, or customer production environment |
 
 ## Evidence and actual commands
 
@@ -22,7 +23,7 @@ python -m unittest discover -s tests -v
 
 Observed local demo: HTTP 201, initial synthetic CRM retry, backoff hold, second successful attempt, process-reopen state complete, auditable transitions; zero failed tests (16 run).
 
-The new public GitHub Actions run [#42571777541](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42571777541) completed successfully for **Python 3.11 and Python 3.12**, including six executable demos, all public tests and the full-history secret scan. This is CI evidence for a synthetic reference lab, not an independent security certification.
+The previous public GitHub Actions run [#42572071973](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions/runs/42572071973) completed successfully for **Python 3.11 and Python 3.12**, covering the first six executable demos and full-history secret scan. The new seven-project CI result must be checked separately before claiming remote verification.
 
 Earlier verified jobs (prior to this update):
 - [Private Level 2 Actions run](https://github.com/arazvera-technologies/arazvera-level2-private-engineering-portfolio/actions/runs/42532266274)
