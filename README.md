@@ -12,13 +12,13 @@ We build scoped backend and automation solutions with testable acceptance criter
 
 Specialist assignments include **FastAPI/PostgreSQL tenant-boundary hardening, transactional outbox and worker recovery, JWT/RS256/JWKS key-rotation validation, controlled database outage testing, and release/incident safeguards**. We deliver scoped acceptance tests, security exclusions, recovery/runbook evidence and a documented client handover.
 
-**What can be verified publicly:** 9 executable synthetic cases with 75 tests, full source and public CI. **Further private engineering:** the recorded Level 3 suite reached 107 unit tests plus focused PostgreSQL, JWT/JWKS, recovery and alert-journal integration labs, with a successful private CI run. Private code is not reproduced in this public repository; those tests are *private lab evidence*, not completed customer deployments or public reproduction.
+**What can be verified publicly:** 9 executable synthetic cases with 78 tests, full source and public CI. **Further private engineering:** the recorded Level 3 suite reached 107 unit tests plus focused PostgreSQL, JWT/JWKS, recovery and alert-journal integration labs, with a successful private CI run. Private code is not reproduced in this public repository; those tests are *private lab evidence*, not completed customer deployments or public reproduction.
 
 **[Level 3 specialist overview](level-3/README.md)** | **[Full service catalog (PDF)](catalog/ARAZVERA_Level3_Specialist_Engineering_Catalog_EN_20261109.pdf)** | **[Capability résumé (PDF)](resumes/level-3/ARAZVERA_Level3_Backend_Reliability_Specialist_Profile_EN_20261109.pdf)**
 
 **Commercial positioning:** Level 3 proposed specialist quotations start at **USD $150–$250+/hour**, subject to scope, client validation and negotiated acceptance. This is a target range only; it is *not* an achieved contract rate or guaranteed market price.
 
-**[Webhook/API recovery — draft client offer](docs/WEBHOOK_RECOVERY_CLIENT_OFFER_20261110.md)** (written scope, demo evidence, pricing hypothesis and exclusions).
+**[Webhook/API recovery — scoped engineering sprint](docs/WEBHOOK_RECOVERY_PRODUCT_CARD_EN_20261110.md)** (written offer, evidence, exclusions, and indicative—not guaranteed—pricing). **[Buyer acceptance and IP checklist](docs/WEBHOOK_BUYER_ACCEPTANCE_IP_DRAFT_EN_20261110.md)**. Run the nine public case suites against disposable PostgreSQL with `python tools/verify_public_with_docker.py`; regenerate a public-only buyer review with `python tools/build_webhook_review_zip.py --out <path-outside-repository>`.
 
 ## Featured engineering case studies
 

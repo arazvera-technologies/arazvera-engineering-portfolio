@@ -56,5 +56,7 @@ jobs:
             test -f "$project/demo.py"
             (cd "$project" && python demo.py && python -m unittest discover -s tests -v)
           done
+      - name: Build and verify standalone public buyer preview
+        run: python tools/build_webhook_review_zip.py --out /tmp/arazvera-webhook-review.zip
       - name: Scan public files and complete Git history
         run: python tools/public_release_audit.py --root . --history --report /tmp/public_release_audit.json
