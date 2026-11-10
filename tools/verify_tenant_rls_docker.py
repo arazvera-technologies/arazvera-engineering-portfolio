@@ -44,14 +44,23 @@ def main() -> int:
             print("BLOCKED: database is not limited to localhost.")
             return 2
         for _ in range(40):
-            if invoke(["docker", "exec", name, "pg_isready", "-U", USER,
-                       "-d", "l3proof"], check=False).returncode == 0:
+            if invoke(["docker", "exec", name, "pg_isready", "-h", "127.0.0.1",
+                       "-U", USER, "-d", "l3proof"], check=False).returncode == 0:
                 break
             time.sleep(0.5)
         else:
             print("BLOCKED: disposable PostgreSQL failed readiness checks.")
             return 2
-        invoke(["docker", "exec", name, "createdb", "-U", USER, "l2public"])
+        for _ in range(10):
+            createdb = invoke(["docker", "exec", name, "createdb", "-U", USER,
+                                "l2public"], check=False)
+            if createdb.returncode == 0:
+                break
+            time.sleep(0.5)
+        else:
+            print("BLOCKED: disposable secondary database could not be created:",
+                  createdb.stderr.strip()[:300])
+            return 2
         env = os.environ.copy()
         env["ARAZVERA_PUBLIC_TEST_PG_DSN"] = (
             f"postgresql://{USER}:{PASSWORD}@127.0.0.1:{match.group(1)}/l2public"
