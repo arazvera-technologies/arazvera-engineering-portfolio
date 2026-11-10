@@ -14,7 +14,7 @@ ARAZVERA TECHNOLOGIES develops reusable, independently testable Python component
 
 **L6-BESS-001 — Battery Supplier Evidence Preflight**
 
-Version 0.2.0 **local laboratory candidate**. Checks supplier IDs, battery-pack records, evidence references, basic numeric inputs and change-event inconsistencies. Supports four CSV tables, strict JSON import with explicit field mapping, and a local `127.0.0.1` synthetic HTTP mock adapter. Produces deterministic JSON/CSV reports and SHA256 evidence. **79 automated tests passed locally on Windows Python 3.12**, including independent extraction and rerun of the private source archive. No live ERP/DPP connection, official EU passport issuance, regulatory-conformity assessment or customer acceptance has been demonstrated. This candidate has not yet passed hosted CI.
+Version 0.2.0 **local laboratory candidate**. Checks supplier IDs, battery-pack records, evidence references, basic numeric inputs and change-event inconsistencies. Supports four CSV tables, strict JSON import with explicit field mapping, and a local `127.0.0.1` synthetic HTTP mock adapter. Produces deterministic JSON/CSV reports and SHA256 evidence. **79 automated tests passed locally on Windows Python 3.12**, including independent extraction and rerun of the private source archive. No live ERP/DPP connection, official EU passport issuance, regulatory-conformity assessment or customer acceptance has been demonstrated. The matching private-repository version has now passed a four-job GitHub Actions matrix on Ubuntu/Windows with Python 3.11/3.12; this is not customer acceptance.
 
 **L6-CRA-001 — CRA Incident Readiness Rehearsal**
 
@@ -24,7 +24,7 @@ Version 0.2.0 technical pilot. Offline rehearsal of illustrative reporting timel
 
 Version 0.2.0 technical pilot. Checks synthetic ICT-provider, submission and feedback CSV relationships, duplicate and orphan rows, LEI check-digit format and inconsistent identities. **33 local Python tests passed.** It does not implement the official EBA RoI XBRL-CSV taxonomy or provide regulatory filing acceptance.
 
-Across these three current pilot suites there are **146 distinct passing local tests** (79 BESS including its package checks, 34 CRA, 33 DORA). These results apply to the explicitly tested synthetic inputs and local environments. Earlier hosted CI results cover prior private-repository commits, **not the newly staged BESS v0.2 candidate**.
+Across these three current pilot suites there are **146 distinct passing local tests** (79 BESS including its package checks, 34 CRA, 33 DORA). These results apply to the explicitly tested synthetic inputs and local environments. The current private GitHub code snapshot passed eight of eight hosted CI jobs across two workflows; the proof remains limited to synthetic tests, not customer production.
 
 ## What customers can request
 

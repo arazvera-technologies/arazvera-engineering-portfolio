@@ -18,7 +18,7 @@ This catalog describes runnable **synthetic engineering test tools** available f
 
 **Potential adaptation:** map a buyer's authorized supplier export to the test schema; validate import and reconciliation in their approved sandbox; add evidence reporting requested in an agreed written scope.
 
-**Limits:** no full EU Battery Passport, no official 71-field semantic applicability test, no DPP Registry integration, no ERP credentials, no production deployment and no regulatory certification. Candidate v0.2 has not been published to the private hosted CI system.
+**Limits:** no full EU Battery Passport, no official 71-field semantic applicability test, no DPP Registry integration, no ERP credentials, no production deployment and no regulatory certification. The v0.2 code passed four hosted BESS CI jobs on Ubuntu/Windows Python 3.11/3.12; the four-job CRA/DORA specialty matrix also passed. No customer industrial API or production acceptance was tested.
 
 **Commercial route:** discuss a written, paid synthetic-first import/reconciliation QA pilot. Nonexclusive source licensing may be considered only after verified IP rights and lawful contracting.
 
