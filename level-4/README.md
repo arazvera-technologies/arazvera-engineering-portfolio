@@ -29,21 +29,22 @@ An operator-approved synthetic release experiment sends 200 actual HTTP requests
 
 | Verified check | Actual outcome | Scope |
 | --- | --- | --- |
-| **GitHub Actions current** | **4 of 4 jobs passed** on private commit `a1b6e137` | Python 3.11, 3.12, PostgreSQL 16, multi-service disposable Docker |
-| Local full Pytest suite | 89 passed, 0 failed (2 non-blocking cache warnings) | Synthetic Docker/PostgreSQL and signed identity |
-| Local Python unit suite | 67 passed | Policies, APIs, tenant security, release gate and dashboard |
+| **GitHub Actions current** | **4 of 4 jobs passed** on private commit `789a044` (run `42766121925`) | Python 3.11/3.12, PostgreSQL 16, multi-service Docker and scoped outages |
+| Local full Pytest suite | **95 passed, 0 failed** (2 non-blocking cache warnings) | Synthetic Docker/PostgreSQL, identity, release gates and resilience |
+| Local Python unit suite | **73 passed** | Policies, APIs, tenant security, release gate, dashboard and outage guard |
 | Canary API acceptance | 3 passed; stable → candidate → HOLD/rollback → stable | Disposable HTTP backends only |
 | Real Chrome/Selenium controls | 13 passed | Live probes, HOLD, canary, rollback, evidence and disconnect |
 | Scoped Worker stop/restart | 7 acceptance checks passed | One-host recovery of a durable pending event |
+| Scoped Control Plane / PostgreSQL outages | **17 acceptance checks passed** | Real bounded stop/start of labelled Level 4-only containers; timeouts recorded non-healthy |
 | PostgreSQL logical restore | 8 acceptance checks passed | Separate disposable restore container and data/RLS integrity |
 
-**Evidence status:** The latest private Canary implementation and its hosted CI run **42763566633** are VERIFIED as laboratory tests. Full source/tests and CI logs remain private and available only for authorized review. Customer production acceptance is not claimed. Detailed source/tests and authenticated CI results are private and available only for authorized review.
+**Evidence status:** Private Canary, signed identity and API/PostgreSQL outage recovery implementation passed the latest hosted CI run **42766121925** (4/4 jobs). Source, tests and CI logs remain restricted to authorized review. This is not customer production acceptance.
 
 ## Reliability and security limits
 
 - No claim of deployment to a customer Enterprise production environment, guaranteed uptime, formal security certification, or customer success history.
 - Synthetic RS256 identity and PostgreSQL tenant tests are not proof of integration with a customer's IAM/SSO or production RBAC.
-- A local logical restore is not independent-site disaster recovery, measured RPO/RTO, or replica failover.
+- A local logical restore and scoped API/PostgreSQL stop-start recovery are not independent-site disaster recovery, measured customer RPO/RTO, or replica failover.
 - Canary and rollback manipulate **only synthetic staging traffic routing**; no customer release, deployment image, or live production service is modified.
 - Basic local credential-pattern checks and CI are not equivalent to an independently verified supply-chain security audit.
 - SHA-256 evidence checksums provide content integrity comparisons; they are not cryptographic signatures establishing operator identity.
