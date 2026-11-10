@@ -6,6 +6,12 @@ We build scoped backend and automation solutions with testable acceptance criter
 
 **[Level 3 specialist catalog (PDF)](catalog/ARAZVERA_Level3_Specialist_Engineering_Catalog_EN_20261109.pdf)** | **[Level 3 catalog (Word)](catalog/ARAZVERA_Level3_Specialist_Engineering_Catalog_EN_20261109.docx)** | **[Level 3 specialist resume (PDF)](resumes/level-3/ARAZVERA_Level3_Backend_Reliability_Specialist_Profile_EN_20261109.pdf)** | **[Level 3 Word](resumes/level-3/ARAZVERA_Level3_Backend_Reliability_Specialist_Profile_EN_20261109.docx)** | **[Explore the advanced Level 2 service catalog](catalog/ARAZVERA_Level2_Client_Engineering_Catalog_EN_20261109.pdf)** | **[Level 2 resume (PDF)](resumes/level-2/ARAZVERA_Level2_Backend_Systems_Resume_EN.pdf)** | **[Service verification matrix](docs/LEVEL2_GLOBAL_SERVICE_MATRIX_20261109.md)** | **[CI test runs](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions)**
 
+## Level 7 — Independent private-source engineering products
+
+**[Level 7 technical product catalog](catalog/level-7/README.md)** | **[Five-page English catalog (PDF)](catalog/ARAZVERA_Level7_Independent_Engineering_Catalog_EN_20261110.pdf)** | **[Level 7 engineering profile (PDF)](resumes/level-7/ARAZVERA_Level7_Engineering_Profile_EN_20261110.pdf)**
+
+Three independent, locally tested product laboratories: supplier record reconciliation with an authenticated localhost API, an offline AI tool policy-decision kernel and SQLite backup/restore verification. **43 local tests** and **four hosted private CI jobs** were successful in the documented limited scope. No customer production or certification is implied; proprietary source remains private. These products do **not** connect to AERON.
+
 ## Level 3 — Specialist security, recovery and reliability engineering
 
 **[Explore Level 3 services, proof and engagement options](level-3/README.md)**

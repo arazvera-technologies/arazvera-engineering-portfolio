@@ -26,6 +26,14 @@ For selected SaaS access-control failures, recoverable webhooks, database safety
 - [Database RLS case: 14 tests plus isolated restore drill](../projects/09_postgres_rls_recovery/)
 - [Verified evidence and limits](../docs/LEVEL3_SPECIALIST_READINESS_20261109.md)
 
+## [Level 7 - Independent Engineering Product Laboratory Profile](level-7/ARAZVERA_Level7_Engineering_Profile_EN.md)
+
+Technical capabilities for supplier-evidence reconciliation, AI tool governance decisions and verified SQLite restore drills. These are reproducible prototype/lab projects, not customer-proven enterprise platforms.
+
+- [**Level 7 capability profile (PDF)**](level-7/ARAZVERA_Level7_Engineering_Profile_EN_20261110.pdf)
+- [**Editable Level 7 profile (Markdown)**](level-7/ARAZVERA_Level7_Engineering_Profile_EN.md)
+- [**Level 7 product catalog**](../catalog/level-7/README.md)
+
 ## Historical file compatibility
 
 Older PDFs and Word files directly under `resumes/` are retained for backward-compatible URLs. **Use the level-specific links above for current resumes.** Those prior documents remain historical snapshots, not alternative current versions. No Level 1 or Level 2 private repository is changed by this public resume separation.
