@@ -31,9 +31,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
-      - name: Install isolated RLS lab dependency
-        run: python -m pip install -r projects/09_postgres_rls_recovery/requirements.txt
+      - name: Install public authorization and RLS verification dependencies
+        run: python -m pip install -r projects/08_postgres_auth_contract/requirements.txt -r projects/09_postgres_rls_recovery/requirements.txt
       - name: Prove database-enforced tenant isolation
         run: python -m unittest discover -s projects/09_postgres_rls_recovery/tests -v
+      - name: Build and independently verify the tenant-isolation buyer ZIP
+        run: python tools/build_tenant_rls_review_zip.py --out /tmp/arazvera-tenant-review.zip
       - name: Verify no production secrets in public files
         run: python tools/public_release_audit.py --root . --report /tmp/arazvera-l3-public-scan.json

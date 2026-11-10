@@ -18,6 +18,8 @@ Specialist assignments include **FastAPI/PostgreSQL tenant-boundary hardening, t
 
 **Commercial positioning:** Level 3 proposed specialist quotations start at **USD $150–$250+/hour**, subject to scope, client validation and negotiated acceptance. This is a target range only; it is *not* an achieved contract rate or guaranteed market price.
 
+**[Tenant Isolation & PostgreSQL Restore — scoped engineering sprint](docs/TENANT_RLS_PRODUCT_CARD_EN_20261110.md)** | **[Buyer acceptance and IP checklist](docs/TENANT_RLS_BUYER_ACCEPTANCE_IP_DRAFT_EN_20261110.md)**. The two public cases cover 28 synthetic database tests and a same-container restore rehearsal; **not** a customer security certification or turnkey SaaS service. Reproduce with `python tools/verify_tenant_rls_docker.py` and build a public-only buyer preview with `python tools/build_tenant_rls_review_zip.py --out <path-outside-repository>`.
+
 ## Featured engineering case studies
 
 | Case | What runs | Evidence | Limits |
