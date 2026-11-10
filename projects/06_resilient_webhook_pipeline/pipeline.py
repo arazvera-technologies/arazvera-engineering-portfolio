@@ -11,6 +11,7 @@ import json
 import re
 import sqlite3
 import time
+from uuid import uuid4
 from contextlib import contextmanager
 from pathlib import Path
 
@@ -86,9 +87,13 @@ class EventPipeline:
                 payload TEXT NOT NULL, digest TEXT NOT NULL,
                 state TEXT NOT NULL, attempts INTEGER NOT NULL DEFAULT 0,
                 next_attempt REAL NOT NULL DEFAULT 0,
-                lease_until REAL, receipt TEXT,
+                lease_until REAL, receipt TEXT, lease_token TEXT,
                 UNIQUE(tenant,event_id))"""
             )
+            # Existing local demo DBs are upgraded without deleting queued events.
+            columns = {row[1] for row in connection.execute("PRAGMA table_info(events)")}
+            if "lease_token" not in columns:
+                connection.execute("ALTER TABLE events ADD COLUMN lease_token TEXT")
             connection.execute(
                 """CREATE TABLE IF NOT EXISTS audit (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -194,14 +199,16 @@ class EventPipeline:
             ).fetchone()
             if row is None:
                 return None
+            token = uuid4().hex
             db.execute(
-                "UPDATE events SET state='leased',attempts=attempts+1,lease_until=? "
-                "WHERE id=?", (now + lease_seconds, row["id"])
+                "UPDATE events SET state='leased',attempts=attempts+1,lease_until=?,lease_token=? "
+                "WHERE id=?", (now + lease_seconds, token, row["id"])
             )
             self._audit(db, row["tenant"], row["event_id"], "leased")
             return {
                 "id": row["id"], "tenant": row["tenant"], "event_id": row["event_id"],
-                "payload": json.loads(row["payload"]), "attempts": row["attempts"] + 1
+                "payload": json.loads(row["payload"]), "attempts": row["attempts"] + 1,
+                "lease_token": token
             }
 
     def recover_expired_leases(self, *, now: float | None = None) -> int:
@@ -216,7 +223,7 @@ class EventPipeline:
             ))
             for row in rows:
                 db.execute(
-                    "UPDATE events SET state='needs_review',lease_until=NULL WHERE id=?",
+                    "UPDATE events SET state='needs_review',lease_until=NULL,lease_token=NULL WHERE id=?",
                     (row["id"],)
                 )
                 self._audit(db, row["tenant"], row["event_id"], "lease_expired_review")
@@ -226,13 +233,16 @@ class EventPipeline:
         with self._db() as db:
             db.execute("BEGIN IMMEDIATE")
             row = db.execute(
-                "SELECT state FROM events WHERE id=? AND tenant=? AND event_id=?",
+                "SELECT state,lease_until,lease_token FROM events WHERE id=? AND tenant=? AND event_id=?",
                 (job["id"], job["tenant"], job["event_id"]),
             ).fetchone()
-            if row is None or row["state"] != "leased":
-                raise TransitionError("Job is not currently leased")
+            if (row is None or row["state"] != "leased"
+                    or row["lease_token"] is None
+                    or row["lease_token"] != job.get("lease_token")
+                    or row["lease_until"] is None or row["lease_until"] <= now):
+                raise TransitionError("Job lease is missing, expired or superseded")
             db.execute(
-                "UPDATE events SET state=?, lease_until=NULL, "
+                "UPDATE events SET state=?, lease_until=NULL, lease_token=NULL, "
                 "next_attempt=?,receipt=? WHERE id=?",
                 (
                     state, now + backoff if backoff is not None else 0,
@@ -262,7 +272,7 @@ class EventPipeline:
                 raise TransitionError("Not a reviewable item")
             state = "pending" if decision == "retry" else "complete"
             db.execute(
-                "UPDATE events SET state=?,attempts=0,next_attempt=?,lease_until=NULL "
+                "UPDATE events SET state=?,attempts=0,next_attempt=?,lease_until=NULL,lease_token=NULL "
                 "WHERE id=?", (state, now if state == "pending" else 0, row["id"])
             )
             self._audit(db, tenant, event_id, "manual_" + decision)

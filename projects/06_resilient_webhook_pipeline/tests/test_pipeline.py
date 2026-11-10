@@ -1,5 +1,6 @@
 """Black-box contract tests for a local-only, durable webhook reliability lab."""
 import json
+import sqlite3
 import tempfile
 import threading
 import unittest
@@ -148,6 +149,49 @@ class PipelineContracts(unittest.TestCase):
         self.assertEqual(self.store.recover_expired_leases(now=1003), 1)
         self.assertIsNone(self.store.claim(now=1004))
         self.assertEqual(self.store.get("alpha", "evt-001")["state"], "needs_review")
+
+    def test_stale_worker_cannot_finish_after_reclaim(self):
+        self.ingest()
+        old_job = self.store.claim(now=1000, lease_seconds=2)
+        self.assertEqual(self.store.recover_expired_leases(now=1003), 1)
+        self.store.resolve("alpha", "evt-001", "retry", now=1004)
+        new_job = self.store.claim(now=1004, lease_seconds=10)
+        self.assertIsNotNone(new_job)
+        with self.assertRaises(TransitionError):
+            self.store._finish(old_job, state="complete", now=1005,
+                               receipt={"receipt": "stale"})
+        self.assertEqual(self.store.get("alpha", "evt-001")["state"], "leased")
+        self.assertEqual(self.store._finish(new_job, state="complete", now=1005,
+                                            receipt={"receipt": "fresh"})["state"], "complete")
+
+    def test_expired_worker_cannot_finish_before_recovery_sweep(self):
+        self.ingest()
+        job = self.store.claim(now=1000, lease_seconds=2)
+        with self.assertRaises(TransitionError):
+            self.store._finish(job, state="complete", now=1003)
+        self.assertEqual(self.store.get("alpha", "evt-001")["state"], "leased")
+
+    def test_legacy_sqlite_schema_upgrades_without_losing_jobs(self):
+        legacy = str(Path(self.directory.name) / "legacy.sqlite")
+        with sqlite3.connect(legacy) as db:
+            db.execute(
+                "CREATE TABLE events (id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                "tenant TEXT NOT NULL, event_id TEXT NOT NULL, payload TEXT NOT NULL, "
+                "digest TEXT NOT NULL, state TEXT NOT NULL, attempts INTEGER NOT NULL DEFAULT 0, "
+                "next_attempt REAL NOT NULL DEFAULT 0, lease_until REAL, receipt TEXT, "
+                "UNIQUE(tenant,event_id))"
+            )
+            db.execute(
+                "INSERT INTO events(tenant,event_id,payload,digest,state) VALUES(?,?,?,?,?)",
+                ("alpha", "legacy-event", '{"kind":"demo"}', "old-digest", "pending")
+            )
+        db.close()  # sqlite3's context manager commits but does not close on Windows.
+        upgraded = EventPipeline(legacy)
+        self.assertEqual(upgraded.get("alpha", "legacy-event")["state"], "pending")
+        job = upgraded.claim(now=1000)
+        self.assertTrue(job["lease_token"])
+        self.assertEqual(upgraded._finish(job, state="complete", now=1001)["state"], "complete")
+        self.assertEqual(upgraded.get("alpha", "legacy-event")["state"], "complete")
 
     def test_manual_resolution_requires_review_or_dead_letter(self):
         self.ingest()

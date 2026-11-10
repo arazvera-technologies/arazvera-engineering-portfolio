@@ -27,11 +27,15 @@ The demo starts an **actual HTTP server bound to 127.0.0.1** on an ephemeral por
 
 **State machine:** pending → leased → complete; or leased → retry → leased; or leased → dead_letter; or leased → needs_review (including expired lease). Manual review may resolve a quarantined event as already applied or explicitly clear it for another attempt.
 
+**Lease safety:** Each claim receives a random fencing token and a bounded lease. Stale or expired workers cannot acknowledge newer claims. Existing SQLite demo databases migrate additively without dropping pending events.
+
 **Atomicity model:** SQLite BEGIN IMMEDIATE plus unique (tenant, event_id) constraint supports concurrent local intake and single-worker claims. No claim of exactly-once side effects across external services: downstream providers must also support idempotency, and a lost acknowledgement must be reconciled.
 
 ## Verification scenarios
 
-16 standard-library tests cover HMAC tampering/staleness, replay conflict, tenant boundaries, durable reopen, 8-way concurrent ingest, two concurrent claims, bounded retries, backoff, dead-letter recovery, uncertain-outcome quarantine, expired leases, audit trail, invalid inputs, and real localhost HTTP responses.
+19 standard-library tests cover HMAC tampering/staleness, replay conflict, tenant boundaries, durable reopen, 8-way concurrent ingest, two concurrent claims, bounded retries, backoff, dead-letter recovery, uncertain-outcome quarantine, expired leases, audit trail, invalid inputs, and real localhost HTTP responses.
+
+For a written, scoped offer and honest delivery boundaries, see the [client offer draft](../../docs/WEBHOOK_RECOVERY_CLIENT_OFFER_20261110.md).
 
 ## Why this matters to a client
 

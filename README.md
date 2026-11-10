@@ -18,17 +18,19 @@ Specialist assignments include **FastAPI/PostgreSQL tenant-boundary hardening, t
 
 **Commercial positioning:** Level 3 proposed specialist quotations start at **USD $150–$250+/hour**, subject to scope, client validation and negotiated acceptance. This is a target range only; it is *not* an achieved contract rate or guaranteed market price.
 
+**[Webhook/API recovery — draft client offer](docs/WEBHOOK_RECOVERY_CLIENT_OFFER_20261110.md)** (written scope, demo evidence, pricing hypothesis and exclusions).
+
 ## Featured engineering case studies
 
 | Case | What runs | Evidence | Limits |
 | --- | --- | --- | --- |
 | **[09 - PostgreSQL RLS & Restore Lab](projects/09_postgres_rls_recovery/)** | Separate tenant DB logins, forced Row-Level Security and backup/restore rehearsal | **14 tests**: row bypass, role spoofing, unauthorized insert/update, rollback and version conflicts | Same-server synthetic database recovery only; not production Supabase or customer RLS audit |
 | **[08 - Authorized PostgreSQL API](projects/08_postgres_auth_contract/)** | FastAPI + signed RS256 JWT + explicit PostgreSQL membership and versioned JSONB records | **14 tests**: tenant isolation, revocation, signature checks, optimistic updates, idempotent replay and outage failure; actual PostgreSQL 16 | Synthetic IdP only; no production RLS, TLS, OAuth login |
-| **[06 - Webhook Reliability & Recovery](projects/06_resilient_webhook_pipeline/)** | Local signed HTTP ingress, SQLite event queue, leasing, retry and dead-letter recovery | **16 tests**: HMAC, concurrent deliveries, crash recovery, auditability and manual reconciliation | CRM adapter mocked; no vendor n8n runtime |
+| **[06 - Webhook Reliability & Recovery](projects/06_resilient_webhook_pipeline/)** | Local signed HTTP ingress, SQLite event queue, leasing, retry and dead-letter recovery | **19 tests**: HMAC, fenced leases, legacy migration, concurrent deliveries, crash recovery, auditability and manual reconciliation | CRM adapter mocked; no vendor n8n runtime |
 | **[07 - Transactional Data Reconciliation](projects/07_data_reconciliation_lab/)** | CSV validation, SQLite atomic import, idempotency, optimistic revisions and quarantine | **21 tests**: dry-run, rollback, version conflicts and concurrent batch processing | CSV/SQLite laboratory, not customer ERP/DB migration |
 | **[01-05 - Targeted integrations](projects/)** | Small isolated Python prototypes for tenant notes, leads, human review, API contracts and Docker configuration | **10 tests** across five deliberately bounded samples | Demonstration modules, not customer-ready platforms |
 
-**Public test evidence:** **75 tests across 9 projects** (61 Level 2 tests + 14 new database-enforced RLS tests). CI uses Python **3.11 and 3.12** with an actual disposable PostgreSQL 16 service, runs all demos, and audits public Git history for secrets. [Inspect live GitHub Actions](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions).
+**Public test evidence:** **78 tests across 9 projects** (64 Level 2 tests + 14 database-enforced RLS tests). CI uses Python **3.11 and 3.12** with an actual disposable PostgreSQL 16 service, runs all demos, and audits public Git history for secrets. [Inspect live GitHub Actions](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions).
 
 **Private engineering baseline (not publicly distributed):** 25 reusable starter-kit families mapped to 30 scoped service directions; **313 tests passing locally** against a separate disposable PostgreSQL 16, and private CI passing on Python 3.11/3.12, Docker smoke and dependency review as of **9 November 2026**. Private-kit tests are **not runnable or independently reviewable from this public repository**. The private source, bundle, supplier/customer secrets and internal build assets are not published.
 

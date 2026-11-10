@@ -8,10 +8,10 @@
 This niche combines three observable public cases:
 - [09 - PostgreSQL RLS & restore lab](../projects/09_postgres_rls_recovery/): **14 database-enforced tenant isolation tests** plus a same-server disposable restore exercise.
 - [08 - Authorized PostgreSQL API](../projects/08_postgres_auth_contract/): 14 application/API authorization and transactional tests; explicitly **not** database RLS.
-- [06 - Webhook replay/recovery](../projects/06_resilient_webhook_pipeline/): 16 HTTP, signed webhook and reliable queue scenarios.
+- [06 - Webhook replay/recovery](../projects/06_resilient_webhook_pipeline/): 19 HTTP, signed webhook, fenced-lease and reliable queue scenarios.
 - [07 - Data reconciliation](../projects/07_data_reconciliation_lab/): 21 atomic import/rollback and concurrency tests.
 
-Other public cases 01-05 contribute 10 additional focused tests. Public total after this RLS case: **75 tests across nine synthetic case studies**. Private Level 2 remains separate (25 reusable kit families, 313 recorded tests). A simulated case and a local restore do not prove a customer production deployment.
+Other public cases 01-05 contribute 10 additional focused tests. Public total after this RLS case: **78 tests across nine synthetic case studies**. Private Level 2 remains separate (25 reusable kit families, 313 recorded tests). A simulated case and a local restore do not prove a customer production deployment.
 
 ## Customer problems this supports approaching
 
