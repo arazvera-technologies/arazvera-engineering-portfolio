@@ -1,17 +1,18 @@
 # Webhook Lease Fencing — Verification Record
 
 **Date:** 2026-11-10
-**Status:** Local lab hardening verified; production and PostgreSQL integration acceptance **not complete**.
+**Status:** All nine public synthetic case suites passed in isolated local execution; production acceptance **not complete**.
 
 ## Resolved defect
-A stale worker could previously finish a job after its lease expired and the event was claimed by a newer worker. The local SQLite event pipeline now issues a unique per-claim `lease_token` and checks both the token and the lease deadline before accepting a completion. Expiration and operator decisions clear the token. Existing SQLite events migrate by adding the token column without discarding pending work.
+A stale worker could previously finish a job after its lease expired and the event was claimed by a newer worker. The local SQLite event pipeline now issues a unique per-claim `lease_token` and checks both the token and the lease deadline before accepting completion. Expiration and operator decisions clear the token. Existing SQLite events migrate by adding the token column without discarding pending work.
 
-## Evidence checked
-- Project 06 isolated test suite: **19 passed**, including stale-reclaim fencing, expiry-before-sweep and legacy-schema upgrade.
-- All 9 public case directories, each in its own Python process: **50 passed, 28 skipped, 0 failures**.
-- The 28 skipped cases are PostgreSQL-backed cases 08 and 09. Their real-database behavior was **not revalidated** in this execution.
-- Root-level `pytest` is not a supported invocation of these cases because multiple folders use a `demo.py` module and `test_demo.py` filename; importing them in one interpreter causes test collection collisions. Use the isolated runner below.
-- Docker Desktop's Linux engine was not responding, and PostgreSQL on local TCP 5432 was unavailable during this check.
+## Current verification evidence
+- Project 06 isolated suite: **19 passed**, including stale-reclaim fencing, expiry-before-sweep and legacy-schema upgrade.
+- All 9 public case suites: **78 passed, 0 skipped, 0 failed** when run separately in isolated Python processes.
+- PostgreSQL-backed cases 08 and 09: **14 + 14 passed** against an actual disposable PostgreSQL 16 Alpine container, using separate synthetic databases `l2public` and `l3proof`. The container was bound to localhost port 55439; no customer database or secrets were used.
+- Strict verification exit code **0**. The runner also correctly blocks with code 2 when required PostgreSQL DSNs are missing.
+- The root-level `pytest` invocation causes import collisions because multiple folders use module names `demo.py` and `test_demo.py`; the per-project process runner avoids those collisions.
+- Public content scan: **125 files scanned, zero findings**. Git history audit was **not completed** in that scan.
 
 ## Reproduction
 From the repository root:
@@ -21,12 +22,12 @@ python tools/verify_public_cases.py
 python tools/verify_public_cases.py --require-postgres
 ```
 
-The strict command currently **blocks** unless both `ARAZVERA_PUBLIC_TEST_PG_DSN` and `ARAZVERA_L3_ADMIN_DSN` are explicitly set to disposable PostgreSQL test databases. Never run the destructive RLS fixture against a customer database.
+The strict command requires `ARAZVERA_PUBLIC_TEST_PG_DSN` and `ARAZVERA_L3_ADMIN_DSN` pointing explicitly to disposable local PostgreSQL databases. The RLS fixture resets synthetic tables and must never be aimed at a real customer database.
 
 ## Remaining acceptance gates
-1. Provision authorized disposable PostgreSQL 16, configure the two test DSNs and execute strict verification; record exact pass/skip counts.
-2. Confirm GitHub CI on an up-to-date, conflict-free branch and run independent install/replay tests.
-3. Conduct customer-specific integration tests and legal/IP/license review before selling a turnkey implementation.
-4. Confirm the live provider's idempotency contract and train the operator to reconcile uncertain outcomes.
+1. Reconcile this local worktree with the latest GitHub main without overwriting parallel work; run independent CI on the reconciled branch.
+2. Repeat clean installation and archive/replay checks for the exact deliverable package.
+3. Conduct customer-specific authorized integration tests, legal/IP/license review, and contract acceptance before selling a turnkey implementation.
+4. Confirm the live provider's idempotency contract and operator procedures for reconciling uncertain external outcomes.
 
-This record verifies **local lab behavior only**. It does not assert production rollout, a customer deployment, 24/7 availability, exactly-once downstream effects, or a guaranteed fixed sale price.
+This record verifies **local lab behavior only**. It does not assert production rollout, a customer deployment, 24/7 availability, exactly-once downstream effects, or a guaranteed sale price.
