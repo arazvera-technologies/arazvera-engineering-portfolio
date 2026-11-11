@@ -2,6 +2,13 @@
 
 **Production-minded Python engineering | Secure APIs | Reliable Integrations | Transactional Data**
 
+## Two distinct ways to work with ARAZVERA
+
+- **[Freelance engineering — customize our tested foundations for your requirements](freelance/README.md):** we adapt, extend, integrate and test existing Python/API/AI/data modules against your written requirements and agreed acceptance criteria. This is a client-specific service; a deployment or full source transfer is not automatic.
+- **[Existing-source product licensing — separate enquiries](sales/README.md):** potential licence of an identified private software asset, without custom development included. Source transfer is subject to ownership, security, legal and payment approval; it is not yet an unconditional sale offer.
+
+These two commercial tracks have separate scope, deliverables, IP terms and proposals. Neither is connected to AERON or unrelated Iran-focused projects.
+
 ## Start here — strengthened buyer pack (11 November 2026)
 
 **For prospective international clients:** choose a business problem, inspect the public test evidence, and request a written, acceptance-based proposal.
