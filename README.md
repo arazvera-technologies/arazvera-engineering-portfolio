@@ -8,9 +8,9 @@ We build scoped backend and automation solutions with testable acceptance criter
 
 ## Level 7 — Independent private-source engineering products
 
-**[Level 7 technical product catalog](catalog/level-7/README.md)** | **[Five-page English catalog (PDF)](catalog/ARAZVERA_Level7_Independent_Engineering_Catalog_EN_20261110.pdf)** | **[Level 7 engineering profile (PDF)](resumes/level-7/ARAZVERA_Level7_Engineering_Profile_EN_20261110.pdf)**
+**[Level 7 product catalog](catalog/level-7/README.md)** | **[Updated 5-page buyer catalog (PDF)](catalog/ARAZVERA_Level7_Customer_Adaptable_Catalog_EN_20261111.pdf)** | **[Updated Level 7 engineering profile (PDF)](resumes/level-7/ARAZVERA_Level7_Engineering_Profile_EN_20261111.pdf)**
 
-Three independent, locally tested product laboratories: supplier record reconciliation with an authenticated localhost API, an offline AI tool policy-decision kernel and SQLite backup/restore verification. **43 local tests** and **four hosted private CI jobs** were successful in the documented limited scope. No customer production or certification is implied; proprietary source remains private. These products do **not** connect to AERON.
+Three private-source customer-adaptable technical labs: general-industry supplier evidence contracts (v0.3.0), a bounded agent tool-control API (v0.2.0), and verified multi-SQLite recovery rehearsal (v0.2.0). **82 local tests**, **71 freshly extracted module tests**, and **four hosted CI jobs** passed in the documented limited scope. No enterprise production, customer acceptance, certification or code-sale price is implied; proprietary code stays private. These products do **not** connect to AERON.
 
 ## Level 3 — Specialist security, recovery and reliability engineering
 

@@ -30,7 +30,7 @@ For selected SaaS access-control failures, recoverable webhooks, database safety
 
 Technical capabilities for supplier-evidence reconciliation, AI tool governance decisions and verified SQLite restore drills. These are reproducible prototype/lab projects, not customer-proven enterprise platforms.
 
-- [**Level 7 capability profile (PDF)**](level-7/ARAZVERA_Level7_Engineering_Profile_EN_20261110.pdf)
+- [**Current Level 7 engineering profile (PDF, November 11)**](level-7/ARAZVERA_Level7_Engineering_Profile_EN_20261111.pdf)
 - [**Editable Level 7 profile (Markdown)**](level-7/ARAZVERA_Level7_Engineering_Profile_EN.md)
 - [**Level 7 product catalog**](../catalog/level-7/README.md)
 

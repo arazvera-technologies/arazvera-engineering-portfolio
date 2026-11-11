@@ -1,29 +1,39 @@
-# Recovery Evidence Orchestrator — ARAZVERA L7-003
+# Recovery Evidence Orchestrator — L7-003
 
-**Version 0.1.0 | LAB_VERIFIED | Bounded SQLite restore-proof utility**
+**Version 0.2.0 — CUSTOMER_CUSTOMIZABLE_LAB_VERIFIED**
+*Trusted-operator recovery proof; source remains private.*
 
-## The buyer problem
+### Buyer problem
+Backups should be verified with repeatable restore drills, rather than
+assuming a stored file is recoverable.
 
-A backup file is useful only if it is consistent and its recovery can be independently demonstrated. Development and staging teams need reproducible recovery exercises that avoid overwriting the source.
+### Working, tested core
+- Consistent native SQLite backup and SHA-256/integrity receipts.
+- A trusted operator configures **multiple named SQLite databases**;
+  the system builds a batch manifest and checks every source before
+  attempting a new isolated restore location.
+- Refuses overwrite of any existing target; damaged snapshots or
+  path-traversal references fail verification before restoration.
+- Restores independently into fresh files, with successful recovery
+  illustrated using synthetic data.
+- Local CLI rather than a public restore API: source/destination authority
+  remains with the trusted buyer operator.
+- **16 focused tests passed** after a clean source release extraction,
+  plus shared 82-test suite.
 
-## What runs today
+### Customer-specific, not yet included
+PostgreSQL point-in-time recovery, multi-host orchestration, cloud storage,
+encryption, scheduling, failover, customer vault, ransomware-resilience
+assessment, actual recovery targets and guaranteed RPO/RTO. This does NOT
+replace Veeam or establish real disaster-recovery readiness.
 
-- Native SQLite transaction-consistent local backup snapshot.
-- Manifest containing snapshot identifier, SHA-256 checksum, size, creation timestamp and measured local operation duration.
-- SQLite integrity verification, checksum mismatch and path substitution rejection.
-- Dry-run restore planning; **restores only to a new local destination** and refuses ordinary pre-existing destinations.
-- Re-verification of the extracted database; local command-line interface.
-- **9 focused tests passed** after clean extraction of the private source release; synthetic end-to-end demonstration restored one expected sample row.
+### Potential engagement
+Paid isolated recovery testing, a narrowly scoped SQLite verifier, or
+further database-specific engineering after the buyer supplies permitted
+infrastructure and written acceptance criteria.
 
-## Honest exclusions
-
-No multi-server replication, PostgreSQL PITR, cross-region failover, Kubernetes, infrastructure orchestration, disaster recovery runbooks validated by a customer, encryption/key escrow, signed immutable evidence chain, actual RPO/RTO commitments, automated periodic scheduling or production-ready hostile file-system fencing. Current snapshots are local and must be secured by the customer's own storage controls.
-
-## Example narrowly scoped engagement
-
-Provide a written restore-test protocol and a verified set of isolated backup/restore fixtures for an authorised small SQLite application. Support for buyer-specified database platforms or multi-site DR would be **separate engineering**, not an available feature today.
-
-Engagement depends on IP review, legal export/contracting/payment eligibility for an Iran-resident vendor and written-only English technical collaboration.
+Owner resident in Iran; legal/contract/export/payment review before any
+licence or source transfer. Written asynchronous English only.
 
 **Contact:** contact.arazvera@gmail.com
 

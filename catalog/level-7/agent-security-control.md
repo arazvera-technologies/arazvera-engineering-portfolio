@@ -1,30 +1,42 @@
-# AI Agent Security Control — ARAZVERA L7-002
+# AI Agent Security Control — L7-002
 
-**Version 0.1.0 | LAB_VERIFIED | Offline policy-decision module, not a live AI gateway**
+**Version 0.2.0 — CUSTOMER_CUSTOMIZABLE_LAB_VERIFIED**
+*Private source; safe, bounded customer-pilot evidence.*
 
-## The buyer problem
+### Buyer problem
+Tool requests initiated by AI workflows should not rely on model
+instructions alone for permission, spending or risky-action approval.
 
-AI-enabled workflows often need an explicit decision boundary before sensitive tools are invoked. Deny-by-default rules, quotas, human approval and replay protection should be testable separately from model prompt behavior.
+### Working, tested core
+- Durable, tenant/agent/tool-scoped policy decisions, deny by default,
+  quotas, idempotency and pending human approval/rejection.
+- Separate local API principal roles for admin, executor, reviewer and
+  auditor. Users do not select their own tenant via request body.
+- Strictly allowlisted **real execution** of two harmless text utilities,
+  SHA-256 hashing and character counting, after authorization.
+- Repeated successfully completed requests return recorded results instead
+  of executing again; changed payloads are rejected, unknown in-flight
+  outcomes fail closed for manual investigation.
+- Local nonroot Docker Compose API verified with a synthetic HTTP workflow.
+- **18 focused tests passed** after fresh extraction, with shared suite and
+  four hosted CI jobs also passing.
 
-## What runs today
+### Customer-specific, not yet included
+Any real email/file/cloud/tool execution, customer MCP gateway, production
+identity provider, OIDC, external approval identity, agent sandbox, actual
+cross-platform enforcement, adversarial/security assessment or an SLA.
+This lab proves a bounded technical pattern, **not** the safety of real
+customer tools.
 
-- Independent local Python/SQLite engine for tenant/agent/tool policy decisions.
-- **Deny by default** without a matching allowed policy.
-- Integer request-unit budget tracking and transaction-bound quota accounting.
-- Durable idempotency key for each request; a repeated key with different intent causes a conflict.
-- Pending human approvals, explicit rejection, and budget re-check when an approval is granted.
-- Tenant-scoped events and audit output, local operator CLI.
-- **10 focused tests passed** in independently extracted private ZIP; shared synthetic demonstration also verifies a blocked unknown tool and a human-approved request.
+### Potential engagement
+Paid adaptation of the policy-and-approval kernel *behind the buyer's
+existing authenticated tool environment* with detailed negative-path tests
+and written acceptance criteria. Limited private source rights subject to
+IP/contract review.
 
-## Honest exclusions
-
-The module **never invokes any real tools, model, network gateway or MCP endpoint**; it produces an authorization decision only. It does not prove reviewer identity, customer SSO/OIDC, runtime sandboxing, cross-framework integration, live policy enforcement, adversarial-prompt resistance, certified security, production API protection or customer adoption. Never use its decision as a sole security boundary for an untrusted caller until proper identity and authenticated transport are integrated.
-
-## Example paid engagement
-
-Integrate a **restricted allow/deny/approval decision kernel** into the customer's existing, properly authenticated AI tool orchestration. Customer supplies the existing gateway, role definitions, acceptance tests and legal API access. We supply scoped integration code, negative-path test cases and written audit receipts.
-
-No standalone enterprise gateway, calls or interview is promised. Contractor resident in Iran; written-only asynchronous collaboration, subject to lawful cross-border contracting and source rights.
+Owner resides in Iran; all participation subject to lawful export,
+contract and payment eligibility. Written English/asynchronous only.
+No video/voice interviews.
 
 **Contact:** contact.arazvera@gmail.com
 

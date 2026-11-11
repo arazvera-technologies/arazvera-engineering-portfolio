@@ -1,42 +1,59 @@
 # ARAZVERA TECHNOLOGIES
-## Level 7 — Engineering Capability Profile
+## Level 7 — Customer-Adaptable Python Engineering Profile
 
-**Independent Private-Source Python Engineering | Evidence Quality | AI Policy Decisions | Verified Recovery**
+**Confidential Source Libraries | Supplier Data Assurance | AI Tool Policies | Verified Database Recovery**
+**Technical contact:** contact.arazvera@gmail.com
 
-**Contact:** contact.arazvera@gmail.com
-**Delivery method:** English written specifications, code/test evidence and asynchronous review only. No phone/video or spoken interviews.
+### Focus
+Design and testing of independent, self-hostable Python engineering
+components with reproducible synthetic verification. Level 7 is an internal
+product-family label, not a formal accreditation or claim of prior enterprise
+deployment. **These products are not connected to AERON.**
 
-### Engineering specialization
+### Working technical product families
 
-ARAZVERA develops scoped Python engineering utilities intended for integration into systems owned and operated by the client. Current Level 7 capabilities span three **locally executable, independently testable laboratory projects**. This portfolio does not claim enterprise production deployments, employees, certifications, customer references or software licenses already sold.
+**01 Supplier Evidence Network (private v0.3.0)**
+Industry-neutral supplier data contracts, versioning, field-type and numeric
+range checks, idempotent imports, cross-supplier discrepancy findings, tenant
+separation, documented reviewer approvals and approved export. FastAPI,
+SQLite, configurable mapping, Docker Compose local pilot.
 
-### Current implemented capabilities
+**02 AI Agent Security Control (private v0.2.0)**
+Deny-by-default policy kernel, budgets, tenant-scoped audit events, human
+review, deterministic replay behavior and a real allowlisted demonstration
+executor with two safe text tools. Secure local authenticated API.
 
-**Supplier data integrity and human review:** SQLite import and reconciliation; input validation, duplicate/replay handling, supplier record audit, tenant-scoped data access and role-bound localhost FastAPI API keys. **Current verified version: v0.2.0.**
+**03 Recovery Evidence Orchestrator (private v0.2.0)**
+SQLite consistent backup, integrity/receipt checks, safe new-file restore,
+operator-configured multi-source catalog and preflight-protected batch
+recovery rehearsal. No multi-host or PostgreSQL disaster recovery claimed.
 
-**AI tool governance:** Durable deny-by-default authorization decisions; tenant-scoped tool policies, request quotas, idempotency, manual approvals and audit events. **Current verified version: v0.1.0**, decision kernel only.
+### Independently repeatable technical evidence
 
-**Recovery test engineering:** Native SQLite snapshot creation, SHA-256/integrity verification, safe test recovery to a fresh file and portable manifest. **Current verified version: v0.1.0**, single-host only.
+- 82 local Python 3.12 test cases passed on Windows.
+- 71 focused tests passed from independently extracted current source ZIPs.
+- Four hosted GitHub Actions jobs passed on Windows/Ubuntu (Python 3.11/3.12).
+- Both locally bound Docker API services ran Healthy, and a real HTTP
+  synthetic integration smoke checked industry-neutral schema, tenant
+  isolation, approval, denied unknown tools and no duplicate execution.
+- No security accreditation, production customer references, accepted
+  procurement order or confirmed software sale asserted.
 
-### Reproducible verification
+### Preferred bounded client engagement
+Synthetic pilot acceptance, customer schema/adapter integration, policy
+review behind the customer's authenticated gateway, or isolated recovery
+verification. Production SSO, real third-party tools, industrial data,
+multi-host operations and SLAs are buyer-dependent separate engineering.
 
-- **43 tests passed locally** on Python 3.12/Windows across the three Level 7 modules.
-- Four hosted private GitHub Actions jobs passed on Windows/Ubuntu x Python 3.11/3.12, test run **42911572920**.
-- Tests for tenant separation, unauthorized key rejection, changed idempotency payloads, human approval, quota rejection, backup corruption and non-overwriting restore.
-- Clean-source-archive tests: 20 supplier v0.2 tests; 10 AI policy; 9 recovery.
-- Temporary loopback HTTP smoke verified unauthorized 401, authorized 201 and no cross-tenant data visibility. No internet-facing deployment was attempted.
+### Contract conditions
+The contractor genuinely resides in Iran; every transaction is subject to
+lawful source ownership/licensing, applicable export/sanctions, customer data
+and permitted payment eligibility. Any customer deployment VPS, API or
+licence is purchased directly by the customer. **Communication is entirely
+written asynchronous English; no telephone, live voice or video.**
 
-### Practical contract scopes
+[Level 7 product catalog](../../catalog/level-7/README.md) ·
+[Written engagement checklist](../../catalog/level-7/engagement-checklist.md)
 
-Controlled input schema/adaptor engineering; offline/on-prem supplier records QA; integration of a policy kernel into an existing authenticated AI gateway; and written backup/restore test evidence for customer-managed systems.
-
-A customer's actual stack, security profile, compliance expectations and acceptance criteria determine necessary changes. Production security, live ERP/DPP integration, real MCP/tool execution and multi-site DR are **not present** in the current labs.
-
-### Delivery and compliance boundaries
-
-The contractor genuinely resides in **Iran**. Every prospective transaction requires written clearance of applicable contracting, source/IP licensing, export/sanctions and permitted payment obligations. Customer directly funds its own approved deployment servers, APIs and third-party licences. Work proceeds only through **asynchronous written English**, supported by AI-assisted written communication verified against real code and tests.
-
-**Reference catalog:** [ARAZVERA Level 7 product catalog](../../catalog/level-7/README.md)
 **Email:** contact.arazvera@gmail.com
-
-*Technical capability profile updated 10 November 2026. No proprietary source is published.*
+*Updated 11 November 2026. Public-safe text; proprietary code not included.*
