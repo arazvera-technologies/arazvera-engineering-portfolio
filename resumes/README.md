@@ -2,6 +2,8 @@
 
 [Back to public portfolio](../README.md)
 
+**Unified public engineering résumé (Levels 1–7, 11 November 2026):** [PDF](ARAZVERA_Public_Engineering_Profile_Levels_1_to_7_20261111.pdf) · [Editable Markdown](ARAZVERA_Public_Engineering_Profile_Levels_1_to_7_20261111.md) · [Companion catalog](../catalog/ARAZVERA_Engineering_Catalog_Levels_1_to_7_20261111.md). All levels are internal engineering categories; laboratory evidence is not customer acceptance.
+
 ## [Level 1 — Focused Python & Lightweight Automation](level-1/README.md)
 
 For smaller, bounded scripting, debugging and basic API tasks.
