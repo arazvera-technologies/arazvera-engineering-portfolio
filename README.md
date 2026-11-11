@@ -2,6 +2,15 @@
 
 **Production-minded Python engineering | Secure APIs | Reliable Integrations | Transactional Data**
 
+## Start here — strengthened buyer pack (11 November 2026)
+
+**For prospective international clients:** choose a business problem, inspect the public test evidence, and request a written, acceptance-based proposal.
+
+- **[Buyer-facing engineering profile — PDF](resumes/ARAZVERA_Client_Engineering_Profile_20261111_V2.pdf)** | [Editable profile](resumes/ARAZVERA_Client_Engineering_Profile_20261111_V2.md) — concise capabilities, proof, deliverables and engagement process.
+- **[Seven-level buyer catalog — PDF](catalog/ARAZVERA_Buyer_Catalog_Levels_1_to_7_20261111_V2.pdf)** | [Editable catalog](catalog/ARAZVERA_Buyer_Catalog_Levels_1_to_7_20261111_V2.md) — problems solved, deliverables, buyer inputs and verification boundaries for Levels 1–7.
+
+**Commercial scope:** Python API/data-integrity repairs, recoverable webhooks/workers, resilience evidence, controlled agent tools and structured supplier-data preflight. Public samples are synthetic and reproducible; private products are not customer production deployments. Actual integration requires approved infrastructure, API rights, security checks, contractual terms and buyer acceptance. The original 11 November catalog and resume remain available below as historical editions.
+
 **All-tier buyer documents (11 November 2026):** [Engineering catalog PDF — Levels 1–7](catalog/ARAZVERA_Engineering_Catalog_Levels_1_to_7_20261111.pdf) · [Editable catalog](catalog/ARAZVERA_Engineering_Catalog_Levels_1_to_7_20261111.md) · [Public résumé PDF — Levels 1–7](resumes/ARAZVERA_Public_Engineering_Profile_Levels_1_to_7_20261111.pdf) · [Editable résumé](resumes/ARAZVERA_Public_Engineering_Profile_Levels_1_to_7_20261111.md) · [Level 5 public capabilities](docs/LEVEL5_PUBLIC_CAPABILITIES_20261111.md) · [Level 6 pilot catalog](docs/level6/ARAZVERA_Level6_Public_Capability_Catalog_EN.md). These are source-free profiles of independent lab-tested offerings, not claims of customer production readiness.
 
 We build scoped backend and automation solutions with testable acceptance criteria, explicit failure handling, and clean delivery documentation. This public repository hosts **nine independently runnable, synthetic engineering case studies** (not deployed customer systems). It deliberately excludes the proprietary ARAZVERA starter-kit library and all customer credentials.
