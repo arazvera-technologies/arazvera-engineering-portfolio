@@ -46,6 +46,10 @@ The same workflow can be used for data imports, agent-tool controls, supplier-re
 
 **Public evidence:** [Nine synthetic, runnable case studies](../README.md#featured-engineering-case-studies) and [GitHub Actions](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions). Private code stays private unless a separate lawful written licence authorizes transfer.
 
+## Location, payment and legal eligibility
+
+The responsible service provider is **resident in Iran**. **USDT is the only payment asset the provider is willing to consider**, and only where the specific work, parties and payment are independently confirmed to be legally permissible and compliant with issuer/platform restrictions. [Tether's terms](https://tether.to/en/legal/) identify Iran as a prohibited jurisdiction for its services; no USDT transfer or service availability is assumed. **Do not send any payment or source material.** If no compliant USDT arrangement is available, we will not enter the contract or use an alternate currency or circumvention. Payment details and written customer acceptance terms are agreed only after compliance review.
+
 ## Request a freelance adaptation proposal
 
 Email **contact.arazvera@gmail.com** with the subject **Freelance engineering — customized implementation**. Include the business problem, current technology, sanitized examples, what must change, expected outcome, deadline, and acceptance criteria. Do not email passwords, API keys, private customer data or production database dumps.

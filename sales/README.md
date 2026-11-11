@@ -24,6 +24,10 @@ Before any protected source review or transfer, parties must agree on exact asse
 
 Source-only licensing **does not include bespoke engineering**. Clients who need modifications, integrations or deployment should request a separately scoped [freelance project](../freelance/README.md).
 
+## Location, payment and legal eligibility
+
+The responsible service provider is **resident in Iran**. **USDT is the only payment asset the provider is willing to consider**, subject to lawful contracting, source/IP rights, and independent sanctions, export, counterparty, issuer/platform and payment compliance checks. [Tether's terms](https://tether.to/en/legal/) identify Iran as a prohibited jurisdiction for its services, so availability of a wallet does not establish eligibility. **Do not send tokens or request private source access before written legal and licence approval.** If compliant USDT payment is unavailable, no sale will proceed and no substitute currency or workaround is offered. Exact asset, licence, amount, network and payment milestones require separate written agreement.
+
 ## Request a licensing discussion
 
 Email **contact.arazvera@gmail.com** with subject **Existing-source licence enquiry** and specify the product family, intended use, proposed rights, technical review needs and lawful contracting/payment eligibility. Never send credentials or sensitive data through ordinary email.
