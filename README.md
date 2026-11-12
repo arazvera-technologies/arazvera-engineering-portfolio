@@ -9,6 +9,12 @@
 
 These two commercial tracks have separate scope, deliverables, IP terms and proposals. Neither is connected to AERON or unrelated Iran-focused projects.
 
+## Level 6 battery-data specialist evidence — updated 12 November 2026
+
+**[Explore the source-free L6-BESS-001 specialist engineering profile](docs/level6/BESS_SPECIALIST_EVIDENCE_20261112_EN.md)** · **[Run the public Hugging Face illustration](https://huggingface.co/spaces/arazvera-technologies/engineering-evidence-showcase)** · **[Read the two-page technical brief (PDF)](https://huggingface.co/spaces/arazvera-technologies/engineering-evidence-showcase/resolve/main/ARAZVERA_L6_BESS_SPECIALIST_PILOT_BRIEF_EN.pdf)**
+
+The private laboratory engine reproduced **72/72 tests included in its source archive**, plus four synthetic evidence paths (clean CSV, deliberately defective CSV, vendor JSON mapping and a localhost-only mock HTTP source). A previous, wider workspace reported 79 tests; **seven additional tests were not rerun** in this extraction. The browser demo is a simpler independent illustration, **not** the private engine. This technical preflight is not a certified EU Battery Passport issuer, production ERP integration or buyer-accepted deployment. Written, eligibility-checked synthetic-only pilot enquiries: **contact.arazvera@gmail.com**.
+
 ## Start here — strengthened buyer pack (11 November 2026)
 
 **For prospective international clients:** choose a business problem, inspect the public test evidence, and request a written, acceptance-based proposal.
