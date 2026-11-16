@@ -11,6 +11,10 @@
 
 These two commercial tracks have separate scope, deliverables, IP terms and proposals. Neither is connected to AERON or unrelated Iran-focused projects.
 
+## Level 6 specialist catalog and current renewable energy offering
+
+**New L6-RENEW-001 — Renewable Deal Preflight (v0.1 synthetic prototype):** [specialist buyer catalog](docs/level6/RENEWABLE_DEAL_PREFLIGHT_L6_CATALOG_EN.md) · [technical résumé](docs/level6/RENEWABLE_DEAL_PREFLIGHT_L6_ENGINEERING_PROFILE_EN.md) · [Level 6 product index](docs/level6/README.md). **55/55 local automated tests**; proprietary source remains private. No customer production approval or contractual relationship is claimed.
+
 ## Level 6 battery-data specialist evidence — updated 12 November 2026
 
 **[Explore the source-free L6-BESS-001 specialist engineering profile](docs/level6/BESS_SPECIALIST_EVIDENCE_20261112_EN.md)** · **[Run the public Hugging Face illustration](https://huggingface.co/spaces/arazvera-technologies/engineering-evidence-showcase)** · **[Read the two-page technical brief (PDF)](https://huggingface.co/spaces/arazvera-technologies/engineering-evidence-showcase/resolve/main/ARAZVERA_L6_BESS_SPECIALIST_PILOT_BRIEF_EN.pdf)**
