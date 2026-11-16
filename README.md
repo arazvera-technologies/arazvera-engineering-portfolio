@@ -2,6 +2,8 @@
 
 **Production-minded Python engineering | Secure APIs | Reliable Integrations | Transactional Data**
 
+**Small paid first project?** [View three bounded Python/API QA packages with indicative USD 300–800 quotations](freelance/BOUNDED_PAID_API_QA_OFFERS_20261116.md). Send a written brief to contact.arazvera@gmail.com; eligibility for legally permitted contracting/payment with a Tabriz, Iran resident is checked before work.
+
 ## Two distinct ways to work with ARAZVERA
 
 - **[Freelance engineering — customize our tested foundations for your requirements](freelance/README.md):** we adapt, extend, integrate and test existing Python/API/AI/data modules against your written requirements and agreed acceptance criteria. This is a client-specific service; a deployment or full source transfer is not automatic.
