@@ -3,6 +3,8 @@
 **ARAZVERA TECHNOLOGIES | Services track | 11 November 2026**
 **Contact:** contact.arazvera@gmail.com | [Engineering profile](../resumes/ARAZVERA_Client_Engineering_Profile_20261111_V2.md) | [Full service catalog, Levels 1–7](../catalog/ARAZVERA_Buyer_Catalog_Levels_1_to_7_20261111_V2.md)
 
+**Start with a small paid assignment:** [Three bounded Python/API QA packages and indicative quotations](BOUNDED_PAID_API_QA_OFFERS_20261116.md). Every proposal depends on written scope, acceptance criteria and legal contracting/payment eligibility.
+
 ## Your project does not have to start from zero
 
 ARAZVERA maintains a private library of Python engineering foundations and public synthetic demonstrations. For a freelance assignment, we check whether an existing foundation fits your problem, then **modify, extend, integrate, test and document it for your specific business requirements**. This can reduce duplicated engineering work when the fit is good; it is not a promise of instant deployment, a fixed implementation price or minor configuration-only changes.
