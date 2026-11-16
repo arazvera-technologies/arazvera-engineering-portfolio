@@ -13,7 +13,7 @@ These two commercial tracks have separate scope, deliverables, IP terms and prop
 
 ## Level 6 specialist catalog and current renewable energy offering
 
-**New L6-RENEW-001 — Renewable Deal Preflight (v0.1 synthetic prototype):** [specialist buyer catalog](docs/level6/RENEWABLE_DEAL_PREFLIGHT_L6_CATALOG_EN.md) · [technical résumé](docs/level6/RENEWABLE_DEAL_PREFLIGHT_L6_ENGINEERING_PROFILE_EN.md) · [Level 6 product index](docs/level6/README.md). **55/55 local automated tests**; proprietary source remains private. No customer production approval or contractual relationship is claimed.
+**New L6-RENEW-001 — Renewable Deal Preflight (v0.1 synthetic prototype):** [specialist buyer catalog](docs/level6/RENEWABLE_DEAL_PREFLIGHT_L6_CATALOG_EN.md) · [buyer PDF](docs/level6/RENEWABLE_DEAL_PREFLIGHT_L6_CATALOG_EN.pdf) · [technical résumé](docs/level6/RENEWABLE_DEAL_PREFLIGHT_L6_ENGINEERING_PROFILE_EN.md) · [résumé PDF](docs/level6/RENEWABLE_DEAL_PREFLIGHT_L6_ENGINEERING_PROFILE_EN.pdf) · [Level 6 product index](docs/level6/README.md). **55/55 local automated tests**; proprietary source remains private. No customer production approval or contractual relationship is claimed.
 
 ## Level 6 battery-data specialist evidence — updated 12 November 2026
 
