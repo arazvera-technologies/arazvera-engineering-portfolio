@@ -25,7 +25,7 @@ We are an independent engineering initiative based in Tabriz, Iran. We reuse ver
 - **L5:** 158/158 local offline tests rerun on 18 November 2026 across four suites. Composite products reuse modules; no enterprise transfer acceptance.
 - **L6:** 128/128 documented distinct offline tests rerun for BESS/CRA/DORA source suites. No regulatory approval or official filing.
 - **L7:** three private customer-adaptable technical kits; 82 local suite tests *reported* in the November engineering checkpoint. Latest real customer production acceptance not verified.
-- **Public demo page:** seven independently scripted, data-only analyzers with **13/13 Node unit tests** and browser loading, search, filtering, good/bad input and error-state interaction checks. Fourteen deterministic example JSON outputs. These simplified demos **are not the proprietary engines**.
+- **Public demo page:** seven independently scripted, data-only analyzers with **24/24 Node unit tests across public demo engine and rule-based buyer matching** and browser loading, search, filtering, good/bad input and error-state interaction checks. Fourteen deterministic example JSON outputs. These simplified demos **are not the proprietary engines**.
 - **GitHub public source examples & CI:** [engineering portfolio](../README.md) · [real public GitHub Actions runs](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions).
 
 ## Contracting and handoff
