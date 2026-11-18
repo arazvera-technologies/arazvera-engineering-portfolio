@@ -22,10 +22,11 @@ We are an independent engineering initiative based in Tabriz, Iran. We reuse ver
 ## What has independently been checked?
 
 - **Historical 44-source-release archive bank (L2–L4 + 5 bundles):** all 44 ZIPs were round-trip fetched from **private** GitHub and SHA-256 / ZIP CRC checks matched. Original integrity audit passed. The count is for technical archive IDs; modules and compositions overlap. **0 production or sale-license approvals.**
+- **Fresh L2 source rerun:** **203/203 actual Python unittest cases PASS** across **19** SHA-verified private Level 2 source archives, executed in disposable offline test directories on 18 November 2026. The other **25** SKUs were not rerun. [Public source-free evidence](https://arazvera-technologies.github.io/buyer-lab/evidence_ledger_44.md).
 - **L5:** 158/158 local offline tests rerun on 18 November 2026 across four suites. Composite products reuse modules; no enterprise transfer acceptance.
 - **L6:** 128/128 documented distinct offline tests rerun for BESS/CRA/DORA source suites. No regulatory approval or official filing.
 - **L7:** three private customer-adaptable technical kits; 82 local suite tests *reported* in the November engineering checkpoint. Latest real customer production acceptance not verified.
-- **Public demo page:** seven independently scripted, data-only analyzers with **24/24 Node unit tests across public demo engine and rule-based buyer matching** and browser loading, search, filtering, good/bad input and error-state interaction checks. Fourteen deterministic example JSON outputs. These simplified demos **are not the proprietary engines**.
+- **Public demo page:** seven independently scripted, data-only analyzers with **27/27 Node unit tests across public demo engine and rule-based buyer matching** and browser loading, search, filtering, good/bad input and error-state interaction checks. Fourteen deterministic example JSON outputs. These simplified demos **are not the proprietary engines**.
 - **GitHub public source examples & CI:** [engineering portfolio](../README.md) · [real public GitHub Actions runs](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/actions).
 
 ## Contracting and handoff
