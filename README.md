@@ -2,11 +2,11 @@
 
 **Production-minded Python engineering | Secure APIs | Reliable Integrations | Transactional Data**
 
-**NEW — [Engineering Proof Lab: 68 technical entries, 7 browser analyzers and 14 reproducible JSON examples](https://arazvera-technologies.github.io/buyer-lab/)** · **[Downloadable two-page proof résumé PDF](resumes/ARAZVERA_Buyer_Proof_Resume_20261118.pdf)** · **[Updated seven-level buyer proof résumé](resumes/ARAZVERA_Buyer_Proof_Resume_20261118.md)**
+**[Live Engineering Proof Lab: 68 technical entries, 7 synthetic browser analyzers and 14 reproducible JSON examples](https://arazvera-technologies.github.io/buyer-lab/)** · **[One-page technical buyer résumé (PDF)](resumes/ARAZVERA_Buyer_Proof_Resume_20261118.pdf)** · **[Four executable case studies (PDF)](resumes/ARAZVERA_Selected_Engineering_Cases_20261118.pdf)**
 
 **NEW — [Six-version international résumé pack (one-page flagship, specialist PDFs, ATS and source-backed cases)](resumes/RESUME_SELECTION_GUIDE_20261118.md)** · **[Download full résumé kit](https://arazvera-technologies.github.io/buyer-lab/downloads/ARAZVERA_Complete_Resume_Pack_20261118.zip)** · **[Personal Python backend CV](resumes/Yashar_Rastgookhiavi_Python_Backend_Freelance_CV_20261118.pdf)**
 
-**[Choose from 44 source-private tested engineering starters — public evidence and demo links](catalog/ARAZVERA_44_ENGINEERING_STARTERS_BUYER_SELECTOR_20261118.md).** Read the readiness limits before treating a starter as production software.
+**[Choose from 44 audited private-source engineering starters](catalog/ARAZVERA_44_ENGINEERING_STARTERS_BUYER_SELECTOR_20261118.md).** [Source-free evidence ledger](https://arazvera-technologies.github.io/buyer-lab/evidence_ledger_44.md): **714 passing selected test executions in 36 green source suites**; four suites have partial coverage, eight further suites require PostgreSQL/Docker, and bundled tests can overlap. These are laboratory results, **not** production acceptance or commercial source-sale approvals.
 
 **Small paid first project?** [View three bounded Python/API QA packages with indicative USD 300–800 quotations](freelance/BOUNDED_PAID_API_QA_OFFERS_20261116.md). Send a written brief to contact.arazvera@gmail.com; eligibility for legally permitted contracting/payment with a Tabriz, Iran resident is checked before work.
 
