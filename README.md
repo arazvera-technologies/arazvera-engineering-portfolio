@@ -2,6 +2,8 @@
 
 **Production-minded Python engineering | Secure APIs | Reliable Integrations | Transactional Data**
 
+**[Choose from 44 source-private tested engineering starters — public evidence and demo links](catalog/ARAZVERA_44_ENGINEERING_STARTERS_BUYER_SELECTOR_20261118.md).** Read the readiness limits before treating a starter as production software.
+
 **Small paid first project?** [View three bounded Python/API QA packages with indicative USD 300–800 quotations](freelance/BOUNDED_PAID_API_QA_OFFERS_20261116.md). Send a written brief to contact.arazvera@gmail.com; eligibility for legally permitted contracting/payment with a Tabriz, Iran resident is checked before work.
 
 ## Two distinct ways to work with ARAZVERA
