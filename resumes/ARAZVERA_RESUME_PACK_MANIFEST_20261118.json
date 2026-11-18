@@ -62,8 +62,12 @@
   "verification": {
     "fresh_private_L2_unit_tests": 203,
     "fresh_private_L2_archives": 19,
-    "public_buyer_lab_tests": 27,
+    "public_buyer_lab_tests": 28,
     "private_archive_SHA_ZIP_check": 44,
+    "fresh_selected_passing_test_executions": 714,
+    "fresh_selected_green_suites": 36,
+    "fresh_partial_selected_suites": 4,
+    "infrastructure_blocked_suites": 8,
     "public_synthetic_case_count": 9,
     "public_repo_reported_case_tests": 75,
     "production_approved_count": 0,

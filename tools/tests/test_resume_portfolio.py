@@ -31,12 +31,16 @@ class ResumeReleaseTests(unittest.TestCase):
         m=self.m["verification"]
         self.assertEqual(m["fresh_private_L2_unit_tests"],203)
         self.assertEqual(m["fresh_private_L2_archives"],19)
-        self.assertEqual(m["public_buyer_lab_tests"],27)
+        self.assertEqual(m["public_buyer_lab_tests"],28)
         self.assertEqual(m["private_archive_SHA_ZIP_check"],44)
+        self.assertEqual(m["fresh_selected_passing_test_executions"],714)
+        self.assertEqual(m["fresh_selected_green_suites"],36)
+        self.assertEqual(m["fresh_partial_selected_suites"],4)
+        self.assertEqual(m["infrastructure_blocked_suites"],8)
         self.assertEqual(m["production_approved_count"],0)
         self.assertEqual(m["sale_license_approved_count"],0)
         overview=(R/"ARAZVERA_Buyer_Proof_Resume_20261118.md").read_text(encoding="utf-8")
-        self.assertIn("203 / 203",overview)
+        self.assertIn("714 PASS / 36 green suites",overview)
         self.assertIn("not references to paid customer deployments",overview)
     def test_all_relative_markdown_links_resolve(self):
         for entry in self.m["files"]:
@@ -54,4 +58,14 @@ class ResumeReleaseTests(unittest.TestCase):
         self.assertIn("ARAZVERA_Complete_Resume_Pack_20261118.zip",root)
         self.assertIn("six-version",index)
         self.assertNotIn(r"\n\n**NEW",root)
+
+    def test_latest_44_package_evidence_is_clear_about_partial_coverage(self):
+        doc=(R/'ARAZVERA_Buyer_Proof_Resume_20261118.md').read_text(encoding='utf-8')
+        self.assertIn('714',doc)
+        self.assertIn('36',doc)
+        self.assertIn('8',doc)
+        self.assertIn('overlap',doc.lower())
+        guide=(R/'RESUME_SELECTION_GUIDE_20261118.md').read_text(encoding='utf-8')
+        self.assertIn('714',guide)
+        self.assertIn('8',guide)
 if __name__=="__main__":unittest.main()

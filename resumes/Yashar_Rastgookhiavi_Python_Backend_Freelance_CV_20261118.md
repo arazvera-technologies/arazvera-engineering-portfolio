@@ -17,7 +17,7 @@ Developing reusable Python backend and integration laboratories with emphasis on
 **Python 3.11+ · FastAPI · REST/HTTP · HMAC · RS256/JWT/JWKS · PostgreSQL 16 · SQLite · CSV/JSON · Docker test fixtures · unittest · GitHub Actions · staged recovery and API contract testing**
 
 ### Additional private-source engineering evidence
-**203/203 unit tests passed** in a fresh offline rerun across 19 SHA-verified private L2 source archives (18 Nov 2026). This proves passing tests in that environment, not a paid client deployment, full dependency security audit or production acceptance. [Source-free ledger](https://arazvera-technologies.github.io/buyer-lab/evidence_ledger_44.md)
+**714 selected test executions passed** across 36 freshly checked suites from 44 private source archives (18 Nov 2026). Four suites had partial coverage and eight were infrastructure-blocked; some bundled tests overlap with standalone suites. This is offline evidence, not production acceptance, source sale clearance or a customer deployment. [Source-free ledger](https://arazvera-technologies.github.io/buyer-lab/evidence_ledger_44.md)
 
 ### Relevant project deliverables
 API validation/fix; signed webhook or retry-safe worker module; reconciliation script and dry-run report; PostgreSQL authorization tests; scoped integration adapter; documented acceptance tests and written handover. Actual vendor auth, infrastructure, performance targets and new functionality are quoted after review.

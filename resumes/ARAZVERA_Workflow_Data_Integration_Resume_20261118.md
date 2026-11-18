@@ -14,7 +14,7 @@
 |---|---|---|
 | [Webhook reliability](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/projects/06_resilient_webhook_pipeline) | Signed localhost HTTP ingress, transactional queue, idempotent replay, retry/backoff and review | **16 public runnable tests** |
 | [Data reconciliation](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/projects/07_data_reconciliation_lab) | Bounded CSV parsing, preview/rollback, tenant isolation, quarantine, concurrency | **21 public runnable tests** |
-| Private n8n workflow audit starter | Synthetic checks of retry safety and workflow conventions | **11 unit tests fresh rerun** within the **203/203 L2** total |
+| Private n8n workflow audit starter | Synthetic checks of retry safety and workflow conventions | **11 tests rerun**, part of 203 core L2 and wider 714 selected executions (overlap counted) |
 | [Browser validation lab](https://arazvera-technologies.github.io/buyer-lab/?bench=workflow#playground) | Change fictional workflow JSON; see unsafe retry, inline secret and timeout findings | Public synthetic rule-engine illustration |
 
 ### What a paid, bounded delivery could include

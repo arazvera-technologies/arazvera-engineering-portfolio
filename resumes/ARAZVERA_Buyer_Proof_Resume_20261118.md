@@ -11,10 +11,10 @@ We start with a versioned private engineering foundation where it fits, then imp
 
 | Evidence class | Verified result | What it means |
 |---|---|---|
-| **Fresh private-source rerun** | **203 / 203 unittest cases PASS** across **19 L2** archives | SHA-checked original sources retested offline in temporary environments; not customer integration |
+| **Fresh source test executions** | **714 PASS / 36 green suites** | 44 SHA-checked archives attempted; **4 partial**, **8 infrastructure-blocked**; bundle overlap; no production acceptance |
 | **Private source integrity** | **44 / 44 ZIPs checked** | Hash, archive and Python syntax preflight; some SKU families overlap; no sale/production licence approvals |
 | **Public runnable examples** | **9 Python cases / 75 tests** in repository | Source code and CI are open to review; separate from proprietary archives |
-| **Interactive buyer proof** | **7 browser test benches / 27 tests** | Editable fictional inputs, failure cases, deterministic reports and client-only project matcher |
+| **Interactive buyer proof** | **7 browser test benches / 28 tests** | Editable fictional inputs, failure cases, deterministic reports and client-only project matcher |
 | **Additional offline labs** | **L5: 158; L6: 128** tests rerun | Agent-control and supplier-evidence labs; not a certification or client acceptance |
 
 ### Four public case studies you can inspect today

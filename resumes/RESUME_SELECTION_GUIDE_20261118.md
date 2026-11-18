@@ -21,7 +21,7 @@
 
 ## Verification discipline
 
-**Verified and newly rerun:** 203/203 L2 unit cases from 19 private source archives; 27/27 public demo/matching/ledger unit tests. **Previously documented:** 158 L5 and 128 L6 offline suite tests. **Archive integrity:** 44/44 canonical private source ZIPs. **Public evidence:** nine independent synthetic Python case studies with 75 repository tests. The private source archive and buyer-specific production systems are not made public.
+**Fresh source evidence:** 714 passing selected test executions in 36 green suites from 44 archives (4 suites partial; 8 other suites blocked by PostgreSQL/Docker; bundle tests may overlap). **Public demo/matching/ledger tests:** 28/28 passed. **Previously documented:** 158 L5 and 128 L6 offline suite tests. **Archive integrity:** 44/44 canonical private source ZIPs. **Public evidence:** nine independent synthetic Python case studies with 75 repository tests. The private source archive and buyer-specific production systems are not made public.
 
 **Do not imply:** actual paying client employment; independently certified production security, regulated compliance, broad source sale rights, a guaranteed performance SLA or a complete customer-specific integration. Internal Levels 1-7 are engineering categories only, not certifications.
 
