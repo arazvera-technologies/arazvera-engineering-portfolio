@@ -6,7 +6,7 @@
 
 **Production-minded Python engineering | Secure APIs | Reliable Integrations | Transactional Data**
 
-**[Live Engineering Proof Lab: 68 technical entries, 7 synthetic browser analyzers and 14 reproducible JSON examples](https://arazvera-technologies.github.io/buyer-lab/)** · **[One-page technical buyer résumé (PDF)](resumes/ARAZVERA_Buyer_Proof_Resume_20261118.pdf)** · **[Four executable case studies (PDF)](resumes/ARAZVERA_Selected_Engineering_Cases_20261118.pdf)**
+**[Live Engineering Proof Lab: 68 technical entries, 7 synthetic browser analyzers and 14 reproducible JSON examples](https://arazvera-technologies.github.io/buyer-lab/)** · **[Current one-page Python Backend CV (PDF)](resumes/ARAZVERA_Yashar_Rastgookhiavi_Backend_API_CV_20261118.pdf)** · **[Four executable case studies (PDF)](resumes/ARAZVERA_Selected_Engineering_Cases_20261118.pdf)**
 
 **NEW — [Six-version international résumé pack (one-page flagship, specialist PDFs, ATS and source-backed cases)](resumes/RESUME_SELECTION_GUIDE_20261118.md)** · **[Download full résumé kit](https://arazvera-technologies.github.io/buyer-lab/downloads/ARAZVERA_Complete_Resume_Pack_20261118.zip)** · **[Personal Python backend CV](resumes/Yashar_Rastgookhiavi_Python_Backend_Freelance_CV_20261118.pdf)**
 
