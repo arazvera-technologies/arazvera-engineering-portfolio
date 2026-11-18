@@ -1,5 +1,9 @@
 # ARAZVERA TECHNOLOGIES | Engineering Portfolio
 
+**NEW · CLIENT-READY R2** — [Buyer-Ready Backend CV R2](resumes/Yashar_Rastgookhiavi_Backend_Client_Ready_20261118.md) · [Buyer-Ready Data Integration CV R2](resumes/Yashar_Rastgookhiavi_Data_Client_Ready_20261118.md) · [Interactive Proof Plus — four scenarios](https://arazvera-technologies.github.io/buyer-lab/proof-plus/) · [Final 858-execution laboratory scope](https://arazvera-technologies.github.io/buyer-lab/evidence_final_20261118.md). Latest selected test suites: **44/44 green, zero latest-suite skips**; 858 is not a count of unique tests or proof of production customer acceptance.
+
+<img src="https://arazvera-technologies.github.io/buyer-lab/proof-plus/assets/arazvera_approved_gold_brand.png" alt="ARAZVERA TECHNOLOGIES gold circuit-tree emblem and wordmark" width="280" />
+
 **Production-minded Python engineering | Secure APIs | Reliable Integrations | Transactional Data**
 
 **[Live Engineering Proof Lab: 68 technical entries, 7 synthetic browser analyzers and 14 reproducible JSON examples](https://arazvera-technologies.github.io/buyer-lab/)** · **[One-page technical buyer résumé (PDF)](resumes/ARAZVERA_Buyer_Proof_Resume_20261118.pdf)** · **[Four executable case studies (PDF)](resumes/ARAZVERA_Selected_Engineering_Cases_20261118.pdf)**
