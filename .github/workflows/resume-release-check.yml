@@ -1,0 +1,41 @@
+name: Verified Public Resume Release
+
+on:
+  push:
+    paths:
+      - "resumes/**"
+      - "README.md"
+      - "tools/tests/test_resume_portfolio.py"
+      - ".github/workflows/resume-release-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  resume-artifact-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate 6 searchable resume artifact families and evidence boundaries
+        run: python -m unittest discover -s tools/tests -p "test_resume_portfolio.py" -v
+      - name: Verify PDF signatures without paid dependencies
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from json import loads
+          r=Path("resumes")
+          j=loads((r/"ARAZVERA_RESUME_PACK_MANIFEST_20261118.json").read_text(encoding="utf-8"))
+          assert len(j["files"])==6
+          for spec in j["files"]:
+              p=Path(spec["pdf"])
+              assert p.read_bytes()[:4]==b"%PDF",p
+              assert p.stat().st_size>20_000,p
+              assert Path(spec["ats_text"]).is_file(),spec
+          print("RESUME_RELEASE_PASS",len(j["files"]),"PDF + Markdown + ATS source families")
+          PY

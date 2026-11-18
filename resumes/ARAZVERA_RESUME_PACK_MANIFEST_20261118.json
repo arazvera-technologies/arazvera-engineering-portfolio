@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-18",
+  "provenance": "public source evidence and private owner-side test reports; no customer deployment claimed",
+  "company": "ARAZVERA TECHNOLOGIES",
+  "founded_by_public_profile": "Yashar Rastgookhiavi",
+  "files": [
+    {
+      "base": "ARAZVERA_Buyer_Proof_Resume_20261118",
+      "title": "Flagship one-page engineering proof CV",
+      "audience": "All inquiries",
+      "pages": 1,
+      "pdf": "resumes/ARAZVERA_Buyer_Proof_Resume_20261118.pdf",
+      "markdown": "resumes/ARAZVERA_Buyer_Proof_Resume_20261118.md",
+      "ats_text": "resumes/ARAZVERA_Buyer_Proof_Resume_20261118.txt"
+    },
+    {
+      "base": "Yashar_Rastgookhiavi_Python_Backend_Freelance_CV_20261118",
+      "title": "Individual Python backend freelance CV",
+      "audience": "Python / FastAPI / backend job",
+      "pages": 1,
+      "pdf": "resumes/Yashar_Rastgookhiavi_Python_Backend_Freelance_CV_20261118.pdf",
+      "markdown": "resumes/Yashar_Rastgookhiavi_Python_Backend_Freelance_CV_20261118.md",
+      "ats_text": "resumes/Yashar_Rastgookhiavi_Python_Backend_Freelance_CV_20261118.txt"
+    },
+    {
+      "base": "ARAZVERA_Workflow_Data_Integration_Resume_20261118",
+      "title": "Workflow & Data Integration CV",
+      "audience": "n8n / API / ETL / webhook",
+      "pages": 1,
+      "pdf": "resumes/ARAZVERA_Workflow_Data_Integration_Resume_20261118.pdf",
+      "markdown": "resumes/ARAZVERA_Workflow_Data_Integration_Resume_20261118.md",
+      "ats_text": "resumes/ARAZVERA_Workflow_Data_Integration_Resume_20261118.txt"
+    },
+    {
+      "base": "ARAZVERA_Agent_AI_Governance_Resume_20261118",
+      "title": "Agent Tool Governance CV",
+      "audience": "MCP / LLM governance / secure agent",
+      "pages": 1,
+      "pdf": "resumes/ARAZVERA_Agent_AI_Governance_Resume_20261118.pdf",
+      "markdown": "resumes/ARAZVERA_Agent_AI_Governance_Resume_20261118.md",
+      "ats_text": "resumes/ARAZVERA_Agent_AI_Governance_Resume_20261118.txt"
+    },
+    {
+      "base": "ARAZVERA_Industrial_Evidence_Resume_20261118",
+      "title": "Industrial Evidence & Resilience CV",
+      "audience": "BESS / CRA / DORA / supplier data",
+      "pages": 1,
+      "pdf": "resumes/ARAZVERA_Industrial_Evidence_Resume_20261118.pdf",
+      "markdown": "resumes/ARAZVERA_Industrial_Evidence_Resume_20261118.md",
+      "ats_text": "resumes/ARAZVERA_Industrial_Evidence_Resume_20261118.txt"
+    },
+    {
+      "base": "ARAZVERA_Selected_Engineering_Cases_20261118",
+      "title": "Four independently runnable case studies",
+      "audience": "Technical reviewer / code interview",
+      "pages": 2,
+      "pdf": "resumes/ARAZVERA_Selected_Engineering_Cases_20261118.pdf",
+      "markdown": "resumes/ARAZVERA_Selected_Engineering_Cases_20261118.md",
+      "ats_text": "resumes/ARAZVERA_Selected_Engineering_Cases_20261118.txt"
+    }
+  ],
+  "verification": {
+    "fresh_private_L2_unit_tests": 203,
+    "fresh_private_L2_archives": 19,
+    "public_buyer_lab_tests": 27,
+    "private_archive_SHA_ZIP_check": 44,
+    "public_synthetic_case_count": 9,
+    "public_repo_reported_case_tests": 75,
+    "production_approved_count": 0,
+    "sale_license_approved_count": 0
+  }
+}

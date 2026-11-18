@@ -1,0 +1,23 @@
+# ARAZVERA TECHNOLOGIES
+## Industrial Data Integrity, Supplier Evidence & Recovery Rehearsals
+
+**Focused technical profile | BESS · CRA · DORA · supplier records · resilience pilots**  
+**Contact:** contact.arazvera@gmail.com | [Supplier evidence demo](https://arazvera-technologies.github.io/buyer-lab/?bench=supplier#playground) | [Public industrial profile](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/docs/level6)
+
+### Selected, bounded technical capabilities
+- **L6 BESS supplier-data preflight:** schema validation, typed CSV/JSON mapping, missing-value and vendor evidence anomaly detection. Synthetic/offline engineering; **not a regulatory battery passport system**.
+- **L6 CRA / DORA record rehearsal:** incident timeline ordering, completeness checks and ICT-provider record triage. Not a legal determination or regulatory filing.
+- **L7 supplier evidence, agent controls and recovery:** three private independent starter labs; **82 previously reported local tests**, not a new external acceptance or enterprise deployment.
+- **Recovery reference:** [Public PostgreSQL RLS and restore case](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/projects/09_postgres_rls_recovery) includes 14 isolated tests and a same-cluster backup/restore rehearsal.
+
+### Verification available today
+**128/128 offline L6 tests** rerun for BESS, CRA and DORA local modules (18 Nov 2026). Separate renewable deal preflight references **55 reported local tests**; its scope is a fictional field-consistency pilot, not an active customer system. The [public supplier browser test](https://arazvera-technologies.github.io/buyer-lab/?bench=supplier#playground) models duplicates, missing evidence references and vendor attribution using fictional records.
+
+### Scopable deliverables
+A prototype validation schema; synthetic CSV/JSON test fixture; supplier record exception report; a human review queue specification; a reproducible test matrix; a staged integration plan; and a concise technical handover. Real vendor feeds, regulated data mappings, professional compliance judgement, hosting, security and production monitoring are **separate customer-specific work**.
+
+**Tooling and methods:** Python, structured CSV/JSON, schema preflight, deterministic exception classification, offline unit tests, source/version inventory, SQL tenant/recovery patterns and acceptance-gated documentation.
+
+**Important:** The internal levels are company engineering categories, not industry accreditations. No certified DORA/CRA compliance, EU Battery Passport issuance, actual ERP integration or paid client acceptance is claimed.
+
+**[Download public proof kit](https://arazvera-technologies.github.io/buyer-lab/downloads/ARAZVERA_Public_Engineering_Proof_Kit_20261118.zip)** | **contact.arazvera@gmail.com** | Tabriz, Iran; written remote scoping subject to applicable law and payment eligibility.

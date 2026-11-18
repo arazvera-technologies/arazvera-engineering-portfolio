@@ -1,0 +1,89 @@
+ARAZVERA - ATS text companion | Evidence-based engineering | Nov 2026
+Companion source: https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/resumes
+
+ARAZVERA TECHNOLOGIES
+Reliable Python systems. Testable integrations. Controlled automation.
+Independent engineering studio | Tabriz, Iran | Written-first remote collaboration
+Contact:
+contact.arazvera@gmail.com |
+GitHub & public code [https://github.com/arazvera-technologies/arazvera-engineering-portfolio]
+|
+Live engineering lab [https://arazvera-technologies.github.io/buyer-lab/]
+|
+Two-page project evidence [https://github.com/arazvera-technologies/arazvera-engineering-portfolio/blob/main/resumes/ARAZVERA_Selected_Engineering_Cases_20261118.pdf]
+Engineering proposition
+We start with a versioned private engineering foundation where it fits, then implement
+the buyer's specific API contracts, data mappings, failure modes and acceptance tests
+. The goal is a demonstrable, bounded handoff - not an unsupported claim that an unknown integration is already complete.
+Evidence at a glance
+Evidence class
+Verified result
+What it means
+Fresh private-source rerun
+203 / 203 unittest cases PASS
+across
+19 L2
+archives
+SHA-checked original sources retested offline in temporary environments; not customer integration
+Private source integrity
+44 / 44 ZIPs checked
+Hash, archive and Python syntax preflight; some SKU families overlap; no sale/production licence approvals
+Public runnable examples
+9 Python cases / 75 tests
+in repository
+Source code and CI are open to review; separate from proprietary archives
+Interactive buyer proof
+7 browser test benches / 27 tests
+Editable fictional inputs, failure cases, deterministic reports and client-only project matcher
+Additional offline labs
+L5: 158; L6: 128
+tests rerun
+Agent-control and supplier-evidence labs; not a certification or client acceptance
+Four public case studies you can inspect today
+01 | Signed webhook and retry recovery
+— Python HTTP, HMAC-SHA256, tenant-scoped idempotency, atomic SQLite state, bounded retries, dead-letter and human reconciliation.
+16 runnable tests
+, including replay conflicts, concurrency, crash recovery and tampering.
+Code, README and tests [https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/projects/06_resilient_webhook_pipeline]
+02 | Transaction-safe data import
+— Offline CSV/SQLite prototype: dry-run preview, atomic import, version conflicts, tenant/source isolation and safe quarantine.
+21 runnable tests
+, including rollback and five-way concurrency.
+Code and tests [https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/projects/07_data_reconciliation_lab]
+03 | Authenticated PostgreSQL API
+— FastAPI, synthetic RS256 JWT/JWKS verification, active database membership, tenant-qualified SQL, revocation and optimistic JSONB updates.
+14 PostgreSQL integration tests
+using an isolated PostgreSQL 16 fixture.
+Code and tests [https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/projects/08_postgres_auth_contract]
+04 | Enforced PostgreSQL RLS and restore drill
+— Database-enforced tenant separation, privileged-role rejection, spoofing checks, role-bound policies and same-cluster backup/restore verification.
+14 isolated tests
+; not a production SaaS audit.
+Code and tests [https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/projects/09_postgres_rls_recovery]
+Delivery capabilities
+Backend & API:
+Python 3.11+, FastAPI, HTTP/REST, request validation, HMAC, synthetic RS256/JWT/JWKS, PostgreSQL 16, SQLite and negative-path tests.
+Integration & data:
+webhook queues, idempotency, CSV/JSON ETL, reconciliation, database versioning, tenant boundaries, n8n-style workflow audit and documented recovery.
+Agent controls:
+bounded tool allowlists, explicit approval gates, audit behavior and offline evaluation prototypes (L5).
+Resilience and evidence:
+synthetic SLO/release gates, rollback drills, supplier-data preflight for BESS/CRA/DORA and recovery evidence (L4-L7 prototype families).
+A controlled four-step engagement
+1. Written brief
+- sanitized inputs/outputs, authorized platforms, versions and required outcomes.
+2. Scoped fit
+- show the matching starter, explain missing integrations, set milestones, source/licence rights and payment eligibility.
+3. Evidence-backed build
+- develop authorized adapters and regression, permission, failure and environment tests.
+4. Handover
+- deliver only contracted source or artifacts, configuration templates, reproducible results and runbooks after acceptance.
+Scope boundary:
+All example results above are laboratory or public synthetic evidence,
+not references to paid customer deployments
+. No formal regulatory certification, guaranteed SLA, unrestricted source-code licence, or production-ready integration is implied. Contracting with an Iran-resident engineering studio is subject to applicable legal and platform eligibility.
+Contact:
+contact.arazvera@gmail.com |
+Explore the seven-test interactive engineering lab [https://arazvera-technologies.github.io/buyer-lab/]
+|
+View 44-SKU public evidence ledger [https://arazvera-technologies.github.io/buyer-lab/evidence_ledger_44.md]

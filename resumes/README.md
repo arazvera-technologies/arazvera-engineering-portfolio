@@ -2,6 +2,15 @@
 
 [Back to public portfolio](../README.md)
 
+## NEW - Current six-version international buyer and freelancer resume collection (18 November 2026)
+
+**Start with [the resume selection guide](RESUME_SELECTION_GUIDE_20261118.md).** It includes a concise **one-page flagship résumé**, a verified personal Python CV, three technically targeted client profiles, a two-page four-case study dossier, plain-text ATS alternatives, and editable Markdown.
+
+**[Download all six PDFs + editable and ATS files](https://arazvera-technologies.github.io/buyer-lab/downloads/ARAZVERA_Complete_Resume_Pack_20261118.zip)** | **[Flagship PDF](ARAZVERA_Buyer_Proof_Resume_20261118.pdf)** | **[Personal backend CV](Yashar_Rastgookhiavi_Python_Backend_Freelance_CV_20261118.pdf)** | **[Four public case studies](ARAZVERA_Selected_Engineering_Cases_20261118.pdf)**
+
+All six files were built from documented technical evidence rather than invented previous employers, client contracts, credentials or certifications.
+
+
 **Unified public engineering résumé (Levels 1–7, 11 November 2026):** [PDF](ARAZVERA_Public_Engineering_Profile_Levels_1_to_7_20261111.pdf) · [Editable Markdown](ARAZVERA_Public_Engineering_Profile_Levels_1_to_7_20261111.md) · [Companion catalog](../catalog/ARAZVERA_Engineering_Catalog_Levels_1_to_7_20261111.md). All levels are internal engineering categories; laboratory evidence is not customer acceptance.
 
 ## [Level 1 — Focused Python & Lightweight Automation](level-1/README.md)

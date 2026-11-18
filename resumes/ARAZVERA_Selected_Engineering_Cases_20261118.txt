@@ -1,0 +1,75 @@
+ARAZVERA - ATS text companion | Evidence-based engineering | Nov 2026
+Companion source: https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/resumes
+
+ARAZVERA TECHNOLOGIES
+Four independently runnable engineering case studies
+A concise, public source-backed evidence dossier for technical buyers
+Contact:
+contact.arazvera@gmail.com |
+Full public repository [https://github.com/arazvera-technologies/arazvera-engineering-portfolio]
+|
+Interactive buyer lab [https://arazvera-technologies.github.io/buyer-lab/]
+Case 06 — Webhook reliability under retries and uncertain outcomes
+Problem modeled:
+a vendor sends the same event more than once; a downstream response is lost; queued work must not silently duplicate side effects.
+Implementation:
+Python localhost HTTP with HMAC-SHA256 signature checks; durable SQLite unique event identity; transactional queue leasing; bounded retry/backoff, dead-letter and explicit operator reconciliation.
+Proof:
+16 tests
+include duplicate/conflicting replay, two concurrent claims, eight concurrent ingests, crash recovery, expired leases and tampered signature rejection.
+Boundary:
+CRM calls are simulated; downstream exactly-once execution is
+not
+guaranteed.
+Source + exact run instructions [https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/projects/06_resilient_webhook_pipeline]
+Case 07 — Transaction-safe CSV reconciliation
+Problem modeled:
+importing external data must not silently corrupt state when source rows repeat, revisions conflict or transactions fail.
+Implementation:
+bounded CSV parser; idempotent batch key, atomic SQLite BEGIN IMMEDIATE; preview/rollback; stale revision quarantine; tenant/source partitioning.
+Proof:
+21 tests
+include dry-run immutability, fault injection, rollback, repeat import, bad CSV and five-way concurrency.
+Boundary:
+offline SQLite laboratory, not production ERP or a real customer database migration.
+Source + exact run instructions [https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/projects/07_data_reconciliation_lab]
+Case 08 — Signed JWT + database-confirmed tenant permissions
+Problem modeled:
+a valid token alone must not grant access after server-side membership has been revoked.
+Implementation:
+FastAPI with RS256 signature, audience/issuer/time-bound and scope checks; PostgreSQL 16 current-membership enforcement; parameterized tenant SQL, versioned JSONB records and idempotency receipts.
+Proof:
+14 PostgreSQL integration tests
+cover revocation, signature tampering, cross-tenant isolation, scope enforcement, data persistence, optimistic conflicts and database outage denial.
+Boundary:
+synthetic token issuer and identity store; no production external IdP, OAuth login or TLS deployment.
+Source + exact run instructions [https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/projects/08_postgres_auth_contract]
+Case 09 — PostgreSQL-enforced RLS and recovery evidence
+Problem modeled:
+application-layer tenant filters can be bypassed unless permissions are checked at the data boundary.
+Implementation:
+PostgreSQL ENABLE/FORCE RLS, least-privileged separate tenant roles and a hardened SECURITY DEFINER tenant mapping.
+Proof:
+14 tests
+for unauthorized read/write, tenant spoofing, policy enforcement, rollback and role privileges. A separate
+same-cluster
+backup/restore rehearsal checks RLS configuration and tenant isolation post-restore.
+Boundary:
+not a drop-in shared-role SaaS RLS design, no cross-region recovery, no signed penetration test.
+Source + exact run instructions [https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/projects/09_postgres_rls_recovery]
+How these cases translate into a scoped client engagement
+A buyer may ask for endpoint contracts, fixture-driven tests, an authorized provider adapter, tenant/security changes, error recovery, an operator runbook and handover. We match the requirement to an existing foundation
+where the fit is real
+; all unavailable integrations or requirements are explicitly estimated as new work.
+Evidence summary and exclusions
+The public repository contains
+nine independent Python cases with 75 tests
+; the four examples above are the most relevant detailed systems. Separately, a
+fresh 203/203 unit-test rerun
+was completed on
+19 private L2 source archives
+. Those private tests do
+not
+turn these public cases into production applications or certify all 44 private SKUs.
+Public source-free evidence ledger [https://arazvera-technologies.github.io/buyer-lab/evidence_ledger_44.md]
+Source ownership, security testing, authorized live access, legal eligibility, payment, commercial licensing and final customer acceptance are verified per engagement. We do not use a public demo to imply completed customer work.

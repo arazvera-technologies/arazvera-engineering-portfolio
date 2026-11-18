@@ -1,6 +1,10 @@
 # ARAZVERA TECHNOLOGIES | Engineering Portfolio
 
-**Production-minded Python engineering | Secure APIs | Reliable Integrations | Transactional Data**\n\n**NEW — [Engineering Proof Lab: 68 technical entries, 7 browser analyzers and 14 reproducible JSON examples](https://arazvera-technologies.github.io/buyer-lab/)** · **[Downloadable two-page proof résumé PDF](resumes/ARAZVERA_Buyer_Proof_Resume_20261118.pdf)** · **[Updated seven-level buyer proof résumé](resumes/ARAZVERA_Buyer_Proof_Resume_20261118.md)**
+**Production-minded Python engineering | Secure APIs | Reliable Integrations | Transactional Data**
+
+**NEW — [Engineering Proof Lab: 68 technical entries, 7 browser analyzers and 14 reproducible JSON examples](https://arazvera-technologies.github.io/buyer-lab/)** · **[Downloadable two-page proof résumé PDF](resumes/ARAZVERA_Buyer_Proof_Resume_20261118.pdf)** · **[Updated seven-level buyer proof résumé](resumes/ARAZVERA_Buyer_Proof_Resume_20261118.md)**
+
+**NEW — [Six-version international résumé pack (one-page flagship, specialist PDFs, ATS and source-backed cases)](resumes/RESUME_SELECTION_GUIDE_20261118.md)** · **[Download full résumé kit](https://arazvera-technologies.github.io/buyer-lab/downloads/ARAZVERA_Complete_Resume_Pack_20261118.zip)** · **[Personal Python backend CV](resumes/Yashar_Rastgookhiavi_Python_Backend_Freelance_CV_20261118.pdf)**
 
 **[Choose from 44 source-private tested engineering starters — public evidence and demo links](catalog/ARAZVERA_44_ENGINEERING_STARTERS_BUYER_SELECTOR_20261118.md).** Read the readiness limits before treating a starter as production software.
 
