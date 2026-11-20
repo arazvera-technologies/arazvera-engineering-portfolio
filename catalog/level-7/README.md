@@ -14,6 +14,10 @@ independent of AERON**; none connects to its servers, Brain, agents or APIs.
 | [AI Agent Security Control](agent-security-control.md) | **0.2.0** | Tenant-based tool policies, approval/quota, authenticated localhost API, execution of two strictly allowlisted text utilities with replay controls | Real buyer tools, IAM, audited enforcement gateway |
 | [Recovery Evidence Orchestrator](recovery-evidence-orchestrator.md) | **0.2.0** | Multi-database SQLite snapshots, integrity evidence, batch preflight and isolated restore CLI | PostgreSQL or other DB, multi-host DR, encryption and recovery SLOs |
 
+## 20 November experimental increment (private branch)
+
+An isolated Supplier Evidence Network development branch now supports read-only supplier-contract preflight, bounded findings and summary-only error reporting; **11 new tests passed, 100 in the full local Python workspace suite**. [Run a separate, fictional browser illustration](https://arazvera-technologies.github.io/buyer-lab/supplier-preflight/). This feature remains pre-release and has not been approved by a production customer. The historical test evidence below is unchanged.
+
 ## Engineering evidence, not sales claims
 
 - **82 Python tests passed locally** on Windows with the full Level 7 suite.

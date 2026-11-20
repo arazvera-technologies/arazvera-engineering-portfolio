@@ -3,6 +3,10 @@
 **Version 0.3.0 — CUSTOMER_CUSTOMIZABLE_LAB_VERIFIED**
 *Private Python source; source-free buyer summary.*
 
+### New pre-ingest laboratory increment (20 November 2026)
+
+An isolated, AI-assisted private engineering branch adds read-only contract validation preflight with bounded findings and non-disclosing error summaries. **11 new Python tests and the 100-test local workspace suite passed.** [Try the independent synthetic browser illustration](https://arazvera-technologies.github.io/buyer-lab/supplier-preflight/); it does **not** execute the private Python backend. Production ERP integration, live authentication, final source licensing, legal checks and buyer acceptance remain pending.
+
 ### Buyer problem
 Different suppliers provide records using different formats, validation
 rules and identifier conventions. Poorly reconciled upstream data may

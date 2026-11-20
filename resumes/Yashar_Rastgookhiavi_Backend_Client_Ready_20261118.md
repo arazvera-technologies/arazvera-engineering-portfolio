@@ -18,6 +18,8 @@ Written-first remote collaboration · [contact.arazvera@gmail.com](mailto:contac
 - **Resilience Lab:** 129 passing owner-only synthetic Docker test executions, two nonblocking warnings.
 - **Runnable public source:** [signed webhook and worker recovery](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/projects/06_resilient_webhook_pipeline), [PostgreSQL API auth](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/projects/08_postgres_auth_contract), [RLS lab](https://github.com/arazvera-technologies/arazvera-engineering-portfolio/tree/main/projects/09_postgres_rls_recovery).
 
+**New verified engineering increment (20 Nov 2026):** Supplier Evidence Network pre-ingest checks with bounded, non-disclosing diagnostic summaries (11 new / 100 local private Python tests passing). [Run source-free synthetic browser demo](https://arazvera-technologies.github.io/buyer-lab/supplier-preflight/). Independent illustration; not a production deployment or a live buyer environment.
+
 **Working stack:** Python, FastAPI, REST/HTTP, HMAC, PostgreSQL, SQLite, JWT/JWKS lab boundaries, Docker, Git and test automation.
 
 **Handoff:** Written sanitized requirements → documented acceptance cases → bounded test/change → reproducible report → approved delivery. No previous customer production reference, live SLA or pre-cleared source-sale rights are claimed. Legal contracting and payment availability for Iran residence must be confirmed before engagement.

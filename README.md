@@ -4,6 +4,8 @@
 
 <img src="https://arazvera-technologies.github.io/buyer-lab/proof-plus/assets/arazvera_approved_gold_brand.png" alt="ARAZVERA TECHNOLOGIES gold circuit-tree emblem and wordmark" width="280" />
 
+**NEW 20 NOV 2026 — [Supplier Data Preflight interactive demo](https://arazvera-technologies.github.io/buyer-lab/supplier-preflight/)** · Edit fictional JSON to check missing/duplicate/type/range errors without uploading data. Separate private AI-assisted L7 engineering increment: 11 new Python tests, 100 local suite tests passing. Browser demo is independent code; no customer deployment or production certification.
+
 **Production-minded Python engineering | Secure APIs | Reliable Integrations | Transactional Data**
 
 **[Live Engineering Proof Lab: 68 technical entries, 7 synthetic browser analyzers and 14 reproducible JSON examples](https://arazvera-technologies.github.io/buyer-lab/)** · **[Current one-page Python Backend CV (PDF)](resumes/ARAZVERA_Yashar_Rastgookhiavi_Backend_API_CV_20261118.pdf)** · **[Four executable case studies (PDF)](resumes/ARAZVERA_Selected_Engineering_Cases_20261118.pdf)**

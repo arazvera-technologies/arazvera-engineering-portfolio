@@ -16,6 +16,10 @@ This is a **different commercial track** from [freelance services and customer-s
 
 See the [source-free Level 7 product catalog](../catalog/level-7/README.md). Product descriptions concern laboratory-tested engineering assets, **not finished buyer production deployments**.
 
+## New source-free technical preview — 20 November 2026
+
+[Supplier Data Preflight interactive browser demo](https://arazvera-technologies.github.io/buyer-lab/supplier-preflight/) illustrates fictional pre-import validation. Separately, an AI-assisted private Python L7 branch passed 11 new local tests, 100 in its isolated suite. This does not grant rights to private source, establish ownership clearance, certify production readiness, or imply buyer acceptance.
+
 ## Licensing and delivery gate
 
 Before any protected source review or transfer, parties must agree on exact asset/version inventory, ownership and third-party rights, licence type (nonexclusive or any separately negotiated exclusive rights), permitted distribution, warranties, support, security exclusions, review procedure and legally permitted contracting and payment.
