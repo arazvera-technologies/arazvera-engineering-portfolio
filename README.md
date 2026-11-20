@@ -4,6 +4,8 @@
 
 <img src="https://arazvera-technologies.github.io/buyer-lab/proof-plus/assets/arazvera_approved_gold_brand.png" alt="ARAZVERA TECHNOLOGIES gold circuit-tree emblem and wordmark" width="280" />
 
+**REQUEST A PAID PILOT — [Supplier preflight and API QA, written fixed scope](https://arazvera-technologies.github.io/buyer-lab/supplier-preflight/pilot/)** · View deliverables and send a one-page written brief for a project quote. No source access is implied.
+
 **NEW 20 NOV 2026 — [Supplier Data Preflight interactive demo](https://arazvera-technologies.github.io/buyer-lab/supplier-preflight/)** · Edit fictional JSON to check missing/duplicate/type/range errors without uploading data. Separate private AI-assisted L7 engineering increment: 11 new Python tests, 100 local suite tests passing. Browser demo is independent code; no customer deployment or production certification.
 
 **Production-minded Python engineering | Secure APIs | Reliable Integrations | Transactional Data**

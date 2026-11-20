@@ -5,6 +5,10 @@
 
 This is a **different commercial track** from [freelance services and customer-specific implementation](../freelance/README.md). Here, a buyer may enquire about a negotiated licence to an identified **existing private software asset**. A source licence is not a promise to customize, install, host or operate a system.
 
+## Paid fixed-scope engineering pilots (source-free)
+
+[**Request a written quote for supplier-data preflight or API reliability QA**](https://arazvera-technologies.github.io/buyer-lab/supplier-preflight/pilot/). Two well-defined service tracks cover agreed input schemas, deterministic validation and regression evidence. A client specifies acceptance criteria; pricing, payment, schedule and exclusions are confirmed in a separate written scope. This is service delivery, not automatic access to private source or a product licence.
+
 ## Examples of private-source product candidates
 
 | Engineering family | Existing lab scope | Not included automatically in an asset licence |
